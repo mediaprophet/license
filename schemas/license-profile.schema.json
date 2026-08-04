@@ -1,0 +1,344 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://ns.webcivics.net/license-rights/schema/license-profile-1.1.json",
+  "title": "Humanitarian Rights-Ontology Licence Profile",
+  "description": "Input profile for the Humanitarian Equity licence generator. Schema validity is necessary but not legal approval.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "profile", "rights_holder", "creator_protection", "work", "jurisdiction",
+    "release_phase", "formation", "agents", "resources", "rights_relations",
+    "grant", "humanitarian", "data_governance", "technical_instruments",
+    "ledger", "exclusions", "enforcement", "sources"
+  ],
+  "properties": {
+    "$schema": {"type": "string"},
+    "schema_version": {"const": "1.1"},
+    "profile": {"$ref": "#/$defs/profile"},
+    "rights_holder": {"$ref": "#/$defs/rightsHolder"},
+    "creator_protection": {"$ref": "#/$defs/creatorProtection"},
+    "work": {"$ref": "#/$defs/work"},
+    "jurisdiction": {"$ref": "#/$defs/jurisdiction"},
+    "release_phase": {"enum": ["restricted_development", "public_inspection", "controlled_evaluation", "controlled_deployment", "ecosystem"]},
+    "formation": {"$ref": "#/$defs/formation"},
+    "agents": {"type": "array", "minItems": 2, "items": {"$ref": "#/$defs/agent"}},
+    "resources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/resource"}},
+    "rights_relations": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/rightsRelation"}},
+    "grant": {"$ref": "#/$defs/grant"},
+    "humanitarian": {"$ref": "#/$defs/humanitarian"},
+    "data_governance": {"$ref": "#/$defs/dataGovernance"},
+    "technical_instruments": {"type": "array", "items": {"$ref": "#/$defs/technicalInstrument"}},
+    "ledger": {"$ref": "#/$defs/ledger"},
+    "exclusions": {"$ref": "#/$defs/exclusions"},
+    "enforcement": {"$ref": "#/$defs/enforcement"},
+    "sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/source"}}
+  },
+  "$defs": {
+    "identifier": {"type": "string", "pattern": "^[a-z][a-z0-9._:-]{1,127}$"},
+    "nonEmpty": {"type": "string", "minLength": 1},
+    "stringList": {"type": "array", "items": {"type": "string", "minLength": 1}, "uniqueItems": true},
+    "profile": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "version", "status", "created_at", "legal_review"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"}, "title": {"$ref": "#/$defs/nonEmpty"},
+        "version": {"$ref": "#/$defs/nonEmpty"},
+        "status": {"enum": ["draft", "review", "adoption_candidate", "adopted"]},
+        "created_at": {"type": "string", "format": "date-time"}, "description": {"type": "string"},
+        "legal_review": {
+          "type": "object", "additionalProperties": false,
+          "required": ["approved", "jurisdictions", "reviewer", "approval_id", "expires"],
+          "properties": {
+            "approved": {"type": "boolean"}, "jurisdictions": {"$ref": "#/$defs/stringList"},
+            "reviewer": {"type": "string"}, "approval_id": {"type": "string"}, "expires": {"type": "string"}
+          }
+        }
+      }
+    },
+    "rightsHolder": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "agent_type", "legal_name", "service_address", "contact", "licensing_capacity", "title_evidence"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"}, "agent_type": {"enum": ["natural_person", "legal_person", "public_authority"]},
+        "legal_name": {"$ref": "#/$defs/nonEmpty"}, "service_address": {"$ref": "#/$defs/nonEmpty"},
+        "contact": {"$ref": "#/$defs/nonEmpty"}, "licensing_capacity": {"$ref": "#/$defs/nonEmpty"},
+        "title_evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}}
+      }
+    },
+    "creatorProtection": {
+      "type": "object", "additionalProperties": false,
+      "required": ["creator_agents", "ownership_and_authority", "public_inspection_not_permission", "technical_access_not_permission", "commercial_exploitation_requires_permission", "ai_use_requires_express_permission", "may_refuse_or_condition_licence", "excluded_agents_receive_no_licence", "creator_economic_survival_is_humanitarian_interest", "provenance_required", "investments", "ai_contribution_policy"],
+      "properties": {
+        "creator_agents": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/identifier"}, "uniqueItems": true},
+        "ownership_and_authority": {"$ref": "#/$defs/nonEmpty"},
+        "public_inspection_not_permission": {"type": "boolean"},
+        "technical_access_not_permission": {"type": "boolean"},
+        "commercial_exploitation_requires_permission": {"type": "boolean"},
+        "ai_use_requires_express_permission": {"type": "boolean"},
+        "may_refuse_or_condition_licence": {"type": "boolean"},
+        "excluded_agents_receive_no_licence": {"type": "boolean"},
+        "creator_economic_survival_is_humanitarian_interest": {"type": "boolean"},
+        "provenance_required": {"type": "boolean"},
+        "investments": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/creatorInvestment"}},
+        "ai_contribution_policy": {"$ref": "#/$defs/nonEmpty"}
+      }
+    },
+    "creatorInvestment": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "contributor", "category", "description", "valuation_method", "evidence", "recovery_treatment"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "contributor": {"$ref": "#/$defs/identifier"},
+        "category": {"enum": ["human_labour", "compute_and_tokens", "infrastructure", "research_and_development", "professional_services", "capital", "opportunity_cost", "safety_and_compliance", "enforcement_and_remediation", "other"]},
+        "description": {"$ref": "#/$defs/nonEmpty"},
+        "valuation_method": {"$ref": "#/$defs/nonEmpty"},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "recovery_treatment": {"$ref": "#/$defs/nonEmpty"}
+      }
+    },
+    "work": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "release_id", "sha256", "manifest_uri", "publicly_inspectable", "third_party_material"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"}, "title": {"$ref": "#/$defs/nonEmpty"},
+        "release_id": {"$ref": "#/$defs/nonEmpty"}, "sha256": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+        "manifest_uri": {"$ref": "#/$defs/nonEmpty"}, "publicly_inspectable": {"type": "boolean"},
+        "third_party_material": {"$ref": "#/$defs/stringList"}
+      }
+    },
+    "jurisdiction": {
+      "type": "object", "additionalProperties": false,
+      "required": ["governing_law", "forum", "relevant_regions", "mandatory_law_review", "trade_law_review"],
+      "properties": {
+        "governing_law": {"$ref": "#/$defs/nonEmpty"}, "forum": {"$ref": "#/$defs/nonEmpty"},
+        "relevant_regions": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "mandatory_law_review": {"type": "boolean"}, "trade_law_review": {"type": "boolean"}
+      }
+    },
+    "formation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["mode", "offer", "acceptance_action", "intention", "consideration", "identity_evidence", "authority_evidence", "terms_version_binding", "receipt_required"],
+      "properties": {
+        "mode": {"enum": ["public-notice-only", "click-accepted", "signed-standard-form", "negotiated", "deed-or-jurisdictional-equivalent"]},
+        "offer": {"type": "string"}, "acceptance_action": {"type": "string"}, "intention": {"type": "boolean"},
+        "consideration": {"type": "string"}, "identity_evidence": {"$ref": "#/$defs/stringList"},
+        "authority_evidence": {"$ref": "#/$defs/stringList"}, "terms_version_binding": {"type": "boolean"},
+        "receipt_required": {"type": "boolean"}
+      }
+    },
+    "agent": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "agent_type", "name", "roles", "principal", "accountable_human_review"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "agent_type": {"enum": ["natural_person", "legal_person", "public_authority", "artificial_agent", "community"]},
+        "name": {"$ref": "#/$defs/nonEmpty"}, "roles": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "principal": {"type": ["string", "null"]}, "accountable_human_review": {"type": "boolean"}
+      }
+    },
+    "resource": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "name", "categories", "sensitivity", "authority_sources", "persistence_class"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"}, "name": {"$ref": "#/$defs/nonEmpty"},
+        "categories": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "sensitivity": {"$ref": "#/$defs/nonEmpty"},
+        "authority_sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "persistence_class": {"enum": ["grant_gated", "relation_gated_capability", "third_party_anchored", "co_owned_record", "artifact_attached_rule", "statutory_retention", "permanent_attribution"]}
+      }
+    },
+    "rightsRelation": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "position", "holder", "counterparty", "action", "resource", "purpose", "context", "authority_sources", "legal_instruments", "technical_instruments", "conditions", "validity", "delegation_depth", "evidence", "verification_status", "remedy"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "position": {"enum": ["claim", "duty", "privilege", "no-right", "power", "liability", "immunity", "disability"]},
+        "holder": {"$ref": "#/$defs/identifier"}, "counterparty": {"$ref": "#/$defs/identifier"},
+        "action": {"$ref": "#/$defs/nonEmpty"}, "resource": {"$ref": "#/$defs/identifier"},
+        "purpose": {"$ref": "#/$defs/nonEmpty"}, "context": {"$ref": "#/$defs/nonEmpty"},
+        "authority_sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "legal_instruments": {"$ref": "#/$defs/stringList"}, "technical_instruments": {"$ref": "#/$defs/stringList"},
+        "conditions": {"$ref": "#/$defs/stringList"}, "validity": {"$ref": "#/$defs/nonEmpty"},
+        "delegation_depth": {"type": "integer", "minimum": 0},
+        "evidence": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "verification_status": {"enum": ["proposed", "attested", "verified", "disputed", "adjudicated"]},
+        "remedy": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}}
+      }
+    },
+    "grant": {
+      "type": "object", "additionalProperties": false,
+      "required": ["eligible_agents", "permitted_actions", "prohibited_actions", "purpose", "duration", "transferable", "sublicensable", "termination", "statutory_savings"],
+      "properties": {
+        "eligible_agents": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/identifier"}},
+        "permitted_actions": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "prohibited_actions": {"type": "array", "items": {"$ref": "#/$defs/nonEmpty"}},
+        "purpose": {"$ref": "#/$defs/nonEmpty"}, "duration": {"$ref": "#/$defs/nonEmpty"},
+        "transferable": {"type": "boolean"}, "sublicensable": {"type": "boolean"},
+        "termination": {"$ref": "#/$defs/nonEmpty"}, "statutory_savings": {"type": "boolean"}
+      }
+    },
+    "humanitarian": {
+      "type": "object", "additionalProperties": false,
+      "required": ["positive_purposes", "prohibited_harms", "non_monetisable_harms", "affected_person_priority", "urgent_protection", "human_review", "appeal"],
+      "properties": {
+        "positive_purposes": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "prohibited_harms": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "non_monetisable_harms": {"type": "boolean"}, "affected_person_priority": {"type": "boolean"},
+        "urgent_protection": {"type": "boolean"}, "human_review": {"type": "boolean"}, "appeal": {"type": "boolean"}
+      }
+    },
+    "dataGovernance": {
+      "type": "object", "additionalProperties": false,
+      "required": ["enabled", "agreement_title", "controllers", "processors", "data_subject_agents", "categories", "purposes", "collection_limitation", "data_quality", "use_limitation", "security_safeguards", "openness", "individual_participation", "retention_and_deletion", "transfers"],
+      "properties": {
+        "enabled": {"type": "boolean"}, "agreement_title": {"type": "string"},
+        "controllers": {"$ref": "#/$defs/stringList"}, "processors": {"$ref": "#/$defs/stringList"},
+        "data_subject_agents": {"$ref": "#/$defs/stringList"}, "categories": {"$ref": "#/$defs/stringList"},
+        "purposes": {"$ref": "#/$defs/stringList"}, "collection_limitation": {"type": "string"},
+        "data_quality": {"type": "string"}, "use_limitation": {"type": "string"},
+        "security_safeguards": {"$ref": "#/$defs/stringList"}, "openness": {"type": "string"},
+        "individual_participation": {"type": "string"}, "retention_and_deletion": {"type": "string"},
+        "transfers": {"type": "array", "items": {"$ref": "#/$defs/transfer"}}
+      }
+    },
+    "transfer": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "exporter", "importer", "origin", "destination", "data_categories", "purpose", "mechanism", "remote_access", "onward_transfer", "continuing_protection", "government_access_assessment", "localisation_review", "suspension_trigger", "legal_review"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"}, "exporter": {"$ref": "#/$defs/identifier"},
+        "importer": {"$ref": "#/$defs/identifier"}, "origin": {"$ref": "#/$defs/nonEmpty"},
+        "destination": {"$ref": "#/$defs/nonEmpty"},
+        "data_categories": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "purpose": {"$ref": "#/$defs/nonEmpty"}, "mechanism": {"$ref": "#/$defs/nonEmpty"},
+        "remote_access": {"type": "boolean"}, "onward_transfer": {"$ref": "#/$defs/nonEmpty"},
+        "continuing_protection": {"$ref": "#/$defs/nonEmpty"},
+        "government_access_assessment": {
+          "type": "object", "additionalProperties": false,
+          "required": ["completed", "legal_basis", "necessity_and_proportionality", "oversight", "transparency", "redress"],
+          "properties": {
+            "completed": {"type": "boolean"}, "legal_basis": {"type": "string"},
+            "necessity_and_proportionality": {"type": "string"}, "oversight": {"type": "string"},
+            "transparency": {"type": "string"}, "redress": {"type": "string"}
+          }
+        },
+        "localisation_review": {"type": "boolean"}, "suspension_trigger": {"$ref": "#/$defs/nonEmpty"},
+        "legal_review": {"type": "boolean"}
+      }
+    },
+    "technicalInstrument": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "instrument_type", "issuer", "subject", "principal", "audience", "resource", "actions", "purpose", "authority_sources", "legal_effect", "cryptographic_suite", "validity", "delegation_depth", "revocation", "stores_personal_data", "human_review", "automated_adjudication"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "instrument_type": {"enum": ["capability_token", "identity_role_credential", "licence_entitlement_token", "acceptance_receipt", "delegation_token", "consent_token", "obligation_token", "provenance_attestation", "revocation_record", "ledger_record", "smart_contract_execution"]},
+        "issuer": {"$ref": "#/$defs/identifier"}, "subject": {"$ref": "#/$defs/identifier"},
+        "principal": {"type": ["string", "null"]}, "audience": {"$ref": "#/$defs/stringList"},
+        "resource": {"$ref": "#/$defs/identifier"},
+        "actions": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "purpose": {"$ref": "#/$defs/nonEmpty"},
+        "authority_sources": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "legal_effect": {"enum": ["evidence_only", "access_control_effect", "contractually_recognised", "statutorily_recognised", "adjudicated"]},
+        "cryptographic_suite": {"$ref": "#/$defs/nonEmpty"}, "validity": {"$ref": "#/$defs/nonEmpty"},
+        "delegation_depth": {"type": "integer", "minimum": 0}, "revocation": {"$ref": "#/$defs/nonEmpty"},
+        "stores_personal_data": {"type": "boolean"}, "human_review": {"type": "boolean"},
+        "automated_adjudication": {"type": "boolean"}
+      }
+    },
+    "ledger": {
+      "type": "object", "additionalProperties": false,
+      "required": ["enabled", "technology", "recording_mode", "stores_sensitive_data", "correction_strategy", "revocation_strategy", "key_compromise_process", "human_review"],
+      "properties": {
+        "enabled": {"type": "boolean"}, "technology": {"type": "string"},
+        "recording_mode": {"enum": ["none", "hashes_and_protected_references", "private_permissioned_records"]},
+        "stores_sensitive_data": {"type": "boolean"}, "correction_strategy": {"type": "string"},
+        "revocation_strategy": {"type": "string"}, "key_compromise_process": {"type": "string"},
+        "human_review": {"type": "boolean"}
+      }
+    },
+    "exclusions": {
+      "type": "object", "additionalProperties": false,
+      "required": ["active", "criteria", "legal_basis", "evidence", "necessity", "proportionality", "exceptions", "expiry", "appeal", "legal_review"],
+      "properties": {
+        "active": {"type": "boolean"}, "criteria": {"$ref": "#/$defs/stringList"},
+        "legal_basis": {"type": "string"}, "evidence": {"$ref": "#/$defs/stringList"},
+        "necessity": {"type": "string"}, "proportionality": {"type": "string"},
+        "exceptions": {"$ref": "#/$defs/stringList"}, "expiry": {"type": "string"},
+        "appeal": {"type": "string"}, "legal_review": {"type": "boolean"}
+      }
+    },
+    "enforcement": {
+      "type": "object", "additionalProperties": false,
+      "required": ["human_review", "notice", "cure", "urgent_protection", "appeal", "evidence_preservation", "affected_person_remedy", "creator_remedy", "non_licensee_notice", "deterrence", "financial_remedies", "enforcement_funding", "recovery_waterfall"],
+      "properties": {
+        "human_review": {"type": "boolean"}, "notice": {"$ref": "#/$defs/nonEmpty"},
+        "cure": {"$ref": "#/$defs/nonEmpty"}, "urgent_protection": {"$ref": "#/$defs/nonEmpty"},
+        "appeal": {"$ref": "#/$defs/nonEmpty"}, "evidence_preservation": {"$ref": "#/$defs/nonEmpty"},
+        "affected_person_remedy": {"$ref": "#/$defs/nonEmpty"},
+        "creator_remedy": {"$ref": "#/$defs/nonEmpty"},
+        "non_licensee_notice": {"$ref": "#/$defs/nonEmpty"},
+        "deterrence": {"$ref": "#/$defs/deterrence"},
+        "financial_remedies": {"type": "array", "items": {"$ref": "#/$defs/financialRemedy"}},
+        "enforcement_funding": {"$ref": "#/$defs/enforcementFunding"},
+        "recovery_waterfall": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}}
+      }
+    },
+    "deterrence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["enabled", "objective", "protected_interests", "evidence_required", "contract_path", "non_assenter_path", "profit_recovery", "creator_cost_recovery", "additional_damages_reservation", "jurisdictional_review"],
+      "properties": {
+        "enabled": {"type": "boolean"}, "objective": {"$ref": "#/$defs/nonEmpty"},
+        "protected_interests": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "evidence_required": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "contract_path": {"$ref": "#/$defs/nonEmpty"}, "non_assenter_path": {"$ref": "#/$defs/nonEmpty"},
+        "profit_recovery": {"$ref": "#/$defs/nonEmpty"}, "creator_cost_recovery": {"$ref": "#/$defs/nonEmpty"},
+        "additional_damages_reservation": {"$ref": "#/$defs/nonEmpty"}, "jurisdictional_review": {"type": "boolean"}
+      }
+    },
+    "financialRemedy": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "basis", "formation_stage", "requires_assent", "remedy_character", "trigger", "legitimate_interest", "creator_interest_components", "valuation_method", "evidence_basis", "proportionality_analysis", "amount_or_range", "causal_link", "cap", "duplication_group", "becomes_payable_when", "review_and_dispute", "legal_review"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"},
+        "basis": {"enum": ["statute", "contract_loss", "agreed_compensation", "indemnity", "judgment", "settlement", "policy_allocation", "avoided_licence_fee", "account_of_profits", "additional_damages", "creator_investment_loss", "enforcement_costs", "retroactive_licence_offer", "litigation_funding_allocation"]},
+        "formation_stage": {"enum": ["none_statutory", "pre_event_contract", "post_event_agreement", "judgment_or_order", "internal_policy"]},
+        "requires_assent": {"type": "boolean"},
+        "remedy_character": {"enum": ["compensatory", "restitutionary", "deterrent", "protective", "cost_recovery", "settlement_price", "funding_allocation"]},
+        "trigger": {"$ref": "#/$defs/nonEmpty"},
+        "legitimate_interest": {"$ref": "#/$defs/nonEmpty"},
+        "creator_interest_components": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "valuation_method": {"$ref": "#/$defs/nonEmpty"},
+        "evidence_basis": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "proportionality_analysis": {"$ref": "#/$defs/nonEmpty"},
+        "amount_or_range": {"$ref": "#/$defs/nonEmpty"}, "causal_link": {"$ref": "#/$defs/nonEmpty"},
+        "cap": {"$ref": "#/$defs/nonEmpty"}, "duplication_group": {"$ref": "#/$defs/nonEmpty"},
+        "becomes_payable_when": {"$ref": "#/$defs/nonEmpty"}, "review_and_dispute": {"$ref": "#/$defs/nonEmpty"},
+        "legal_review": {"type": "boolean"}
+      }
+    },
+    "enforcementFunding": {
+      "type": "object", "additionalProperties": false,
+      "required": ["enabled", "mechanisms", "separate_agreement_required", "creator_control_preserved", "professional_rules_review", "allocation", "safeguards", "legal_review"],
+      "properties": {
+        "enabled": {"type": "boolean"},
+        "mechanisms": {"type": "array", "minItems": 1, "items": {"enum": ["creator_reserve", "conditional_fee", "litigation_funding", "after_event_insurance", "recovery_contingent_enforcement_reward", "rights_management_agent", "collective_enforcement", "other"]}, "uniqueItems": true},
+        "separate_agreement_required": {"type": "boolean"},
+        "creator_control_preserved": {"type": "boolean"},
+        "professional_rules_review": {"type": "boolean"},
+        "allocation": {"$ref": "#/$defs/nonEmpty"},
+        "safeguards": {"type": "array", "minItems": 1, "items": {"$ref": "#/$defs/nonEmpty"}},
+        "legal_review": {"type": "boolean"}
+      }
+    },
+    "source": {
+      "type": "object", "additionalProperties": false,
+      "required": ["id", "title", "uri", "source_type", "binding_status", "version", "mapping_status"],
+      "properties": {
+        "id": {"$ref": "#/$defs/identifier"}, "title": {"$ref": "#/$defs/nonEmpty"},
+        "uri": {"$ref": "#/$defs/nonEmpty"},
+        "source_type": {"enum": ["statute", "treaty", "recommendation", "declaration", "general_comment", "judgment", "contract", "project_policy", "ontology", "research", "technical_standard"]},
+        "binding_status": {"$ref": "#/$defs/nonEmpty"}, "version": {"$ref": "#/$defs/nonEmpty"},
+        "mapping_status": {"enum": ["verbatim", "summarised", "human_attested", "machine_proposed", "legally_reviewed"]}
+      }
+    }
+  }
+}

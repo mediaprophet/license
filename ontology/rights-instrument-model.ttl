@@ -1,0 +1,225 @@
+@prefix rdf:   <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs:  <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix owl:   <http://www.w3.org/2002/07/owl#> .
+@prefix xsd:   <http://www.w3.org/2001/XMLSchema#> .
+@prefix sh:    <http://www.w3.org/ns/shacl#> .
+@prefix skos:  <http://www.w3.org/2004/02/skos/core#> .
+@prefix prov:  <http://www.w3.org/ns/prov#> .
+@prefix odrl:  <http://www.w3.org/ns/odrl/2/> .
+@prefix dct:   <http://purl.org/dc/terms/> .
+@prefix values:<https://ns.webcivics.net/values/> .
+@prefix jural: <https://ns.webcivics.net/jural/> .
+@prefix agency:<https://ns.webcivics.net/agency/> .
+@prefix spc:   <https://ns.webcivics.net/social-permissive-commons/> .
+@prefix hro:   <https://ns.webcivics.net/license-rights/> .
+
+hro: a owl:Ontology ;
+    dct:title "Humanitarian Licensing Rights and Applied Instruments Ontology"@en ;
+    dct:created "2026-08-04"^^xsd:date ;
+    dct:description "Provisional vocabulary connecting Hohfeldian rights statements to authority sources, legal instruments, cryptographic instruments, ledger evidence, and remedies."@en ;
+    owl:imports <https://ns.webcivics.net/jural/> ,
+                <https://ns.webcivics.net/agency/> ,
+                <https://ns.webcivics.net/social-permissive-commons/> .
+
+# Core records
+
+hro:RightsStatement a rdfs:Class ;
+    rdfs:subClassOf prov:Entity ;
+    rdfs:label "rights statement"@en ;
+    rdfs:comment "A framed jural position held by one agent toward another over a defined action and resource."@en .
+
+hro:AuthoritySource a rdfs:Class ; rdfs:label "authority source"@en .
+hro:LegalInstrument a rdfs:Class ; rdfs:subClassOf prov:Entity ; rdfs:label "legal instrument"@en .
+hro:TechnicalInstrument a rdfs:Class ; rdfs:subClassOf prov:Entity ; rdfs:label "technical instrument"@en .
+hro:InformationResource a rdfs:Class ; rdfs:subClassOf prov:Entity ; rdfs:label "information resource"@en .
+hro:DerivedArtifact a rdfs:Class ; rdfs:subClassOf hro:InformationResource ; rdfs:label "derived artifact"@en .
+hro:CreatorProtectionPolicy a rdfs:Class ; rdfs:subClassOf prov:Plan ; rdfs:label "creator protection policy"@en .
+hro:CreatorInvestment a rdfs:Class ; rdfs:subClassOf prov:Entity ; rdfs:label "creator investment"@en .
+hro:HumanLabourInvestment a rdfs:Class ; rdfs:subClassOf hro:CreatorInvestment .
+hro:ComputeAndTokenInvestment a rdfs:Class ; rdfs:subClassOf hro:CreatorInvestment .
+hro:InfrastructureInvestment a rdfs:Class ; rdfs:subClassOf hro:CreatorInvestment .
+hro:OpportunityCostInvestment a rdfs:Class ; rdfs:subClassOf hro:CreatorInvestment .
+hro:SafetyAndComplianceInvestment a rdfs:Class ; rdfs:subClassOf hro:CreatorInvestment .
+hro:EnforcementInvestment a rdfs:Class ; rdfs:subClassOf hro:CreatorInvestment .
+hro:EconomicExploitation a rdfs:Class ; rdfs:subClassOf prov:Activity ; rdfs:label "economic exploitation"@en .
+hro:EnforcementFundingInstrument a rdfs:Class ; rdfs:subClassOf prov:Entity ; rdfs:label "enforcement funding instrument"@en .
+hro:RecoveryAllocation a rdfs:Class ; rdfs:subClassOf prov:Plan ; rdfs:label "recovery allocation"@en .
+hro:RemedyProcedure a rdfs:Class ; rdfs:subClassOf prov:Plan ; rdfs:label "remedy procedure"@en .
+hro:VerificationStatus a rdfs:Class .
+hro:Proposed a hro:VerificationStatus .
+hro:Attested a hro:VerificationStatus .
+hro:Verified a hro:VerificationStatus .
+hro:Disputed a hro:VerificationStatus .
+hro:Adjudicated a hro:VerificationStatus .
+
+# Authority kinds: classification does not itself determine binding force.
+
+hro:StatuteOrMandatoryLaw a hro:AuthoritySource .
+hro:CopyrightOrOtherIP a hro:AuthoritySource .
+hro:AcceptedContract a hro:AuthoritySource .
+hro:ValidConsent a hro:AuthoritySource .
+hro:CourtOrRegulatoryOrder a hro:AuthoritySource .
+hro:BindingOrganisationalRule a hro:AuthoritySource .
+hro:ProjectPolicy a hro:AuthoritySource .
+hro:HumanitarianPrinciple a hro:AuthoritySource .
+hro:MachineProposedMapping a hro:AuthoritySource .
+
+# Legal instruments
+
+hro:PublicInspectionLicence a rdfs:Class ; rdfs:subClassOf hro:LegalInstrument, odrl:Policy .
+hro:ContractAndIPLicence a rdfs:Class ; rdfs:subClassOf hro:LegalInstrument, odrl:Policy .
+hro:RightsGovernedInformationAgreement a rdfs:Class ; rdfs:subClassOf hro:LegalInstrument, odrl:Policy .
+hro:TransborderTransferSchedule a rdfs:Class ; rdfs:subClassOf hro:LegalInstrument, odrl:Policy .
+hro:ContributorInstrument a rdfs:Class ; rdfs:subClassOf hro:LegalInstrument .
+hro:ConsentRecord a rdfs:Class ; rdfs:subClassOf hro:LegalInstrument, prov:Entity .
+hro:JudgmentOrOrder a rdfs:Class ; rdfs:subClassOf hro:LegalInstrument .
+
+# Technical instruments
+
+hro:CapabilityToken a rdfs:Class ; rdfs:subClassOf hro:TechnicalInstrument .
+hro:IdentityRoleCredential a rdfs:Class ; rdfs:subClassOf hro:TechnicalInstrument .
+hro:LicenceEntitlementToken a rdfs:Class ; rdfs:subClassOf hro:TechnicalInstrument .
+hro:AcceptanceReceipt a rdfs:Class ; rdfs:subClassOf hro:TechnicalInstrument .
+hro:DelegationToken a rdfs:Class ; rdfs:subClassOf hro:TechnicalInstrument .
+hro:ConsentToken a rdfs:Class ; rdfs:subClassOf hro:TechnicalInstrument .
+hro:ObligationToken a rdfs:Class ; rdfs:subClassOf hro:TechnicalInstrument .
+hro:ProvenanceAttestation a rdfs:Class ; rdfs:subClassOf hro:TechnicalInstrument, prov:Entity .
+hro:RevocationRecord a rdfs:Class ; rdfs:subClassOf hro:TechnicalInstrument .
+hro:LedgerRecord a rdfs:Class ; rdfs:subClassOf hro:TechnicalInstrument .
+hro:SmartContractExecution a rdfs:Class ; rdfs:subClassOf hro:TechnicalInstrument, prov:Activity .
+
+# Legal-effect classification
+
+hro:LegalEffect a rdfs:Class .
+hro:EvidenceOnly a hro:LegalEffect .
+hro:AccessControlEffect a hro:LegalEffect .
+hro:ContractuallyRecognised a hro:LegalEffect .
+hro:StatutorilyRecognised a hro:LegalEffect .
+hro:AdjudicatedEffect a hro:LegalEffect .
+
+# Rights-statement properties
+
+hro:position a rdf:Property ; rdfs:domain hro:RightsStatement ; rdfs:range jural:JuralRelation .
+hro:holder a rdf:Property ; rdfs:domain hro:RightsStatement ; rdfs:range values:Agent .
+hro:counterparty a rdf:Property ; rdfs:domain hro:RightsStatement ; rdfs:range values:Agent .
+hro:action a rdf:Property ; rdfs:domain hro:RightsStatement .
+hro:resource a rdf:Property ; rdfs:domain hro:RightsStatement ; rdfs:range prov:Entity .
+hro:purpose a rdf:Property ; rdfs:domain hro:RightsStatement .
+hro:context a rdf:Property ; rdfs:domain hro:RightsStatement .
+hro:authoritySource a rdf:Property ; rdfs:range hro:AuthoritySource .
+hro:legalInstrument a rdf:Property ; rdfs:range hro:LegalInstrument .
+hro:technicalInstrument a rdf:Property ; rdfs:range hro:TechnicalInstrument .
+hro:condition a rdf:Property .
+hro:validFrom a rdf:Property ; rdfs:range xsd:dateTime .
+hro:validUntil a rdf:Property ; rdfs:range xsd:dateTime .
+hro:delegationDepth a rdf:Property ; rdfs:range xsd:nonNegativeInteger .
+hro:revocationMechanism a rdf:Property .
+hro:evidence a rdf:Property ; rdfs:range prov:Entity .
+hro:verificationStatus a rdf:Property ; rdfs:range hro:VerificationStatus .
+hro:remedy a rdf:Property ; rdfs:range hro:RemedyProcedure .
+
+# Technical-instrument properties
+
+hro:issuer a rdf:Property ; rdfs:domain hro:TechnicalInstrument ; rdfs:range values:Agent .
+hro:subject a rdf:Property ; rdfs:domain hro:TechnicalInstrument ; rdfs:range values:Agent .
+hro:principal a rdf:Property ; rdfs:range values:Agent .
+hro:audience a rdf:Property ; rdfs:domain hro:TechnicalInstrument ; rdfs:range values:Agent .
+hro:cryptographicSuite a rdf:Property .
+hro:tokenIdentifier a rdf:Property .
+hro:legalEffect a rdf:Property ; rdfs:domain hro:TechnicalInstrument ; rdfs:range hro:LegalEffect .
+hro:recordsEvent a rdf:Property ; rdfs:domain hro:LedgerRecord ; rdfs:range prov:Activity .
+hro:storesSensitiveData a rdf:Property ; rdfs:domain hro:LedgerRecord ; rdfs:range xsd:boolean .
+hro:correctionRecord a rdf:Property ; rdfs:domain hro:LedgerRecord ; rdfs:range hro:LedgerRecord .
+hro:supersedes a rdf:Property ; rdfs:subPropertyOf prov:wasRevisionOf .
+hro:requiresHumanReview a rdf:Property ; rdfs:range xsd:boolean .
+hro:automatedAdjudication a rdf:Property ; rdfs:range xsd:boolean .
+
+# Creator autonomy, investment, exploitation, and recovery properties
+
+hro:creator a rdf:Property ; rdfs:range values:Agent .
+hro:contributor a rdf:Property ; rdfs:range values:Agent .
+hro:investment a rdf:Property ; rdfs:range hro:CreatorInvestment .
+hro:investmentCategory a rdf:Property .
+hro:valuationMethod a rdf:Property .
+hro:recoveryTreatment a rdf:Property .
+hro:ownershipAndAuthority a rdf:Property .
+hro:publicInspectionNotPermission a rdf:Property ; rdfs:range xsd:boolean .
+hro:technicalAccessNotPermission a rdf:Property ; rdfs:range xsd:boolean .
+hro:commercialExploitationRequiresPermission a rdf:Property ; rdfs:range xsd:boolean .
+hro:aiUseRequiresExpressPermission a rdf:Property ; rdfs:range xsd:boolean .
+hro:mayRefuseOrConditionLicence a rdf:Property ; rdfs:range xsd:boolean .
+hro:excludedAgentsReceiveNoLicence a rdf:Property ; rdfs:range xsd:boolean .
+hro:creatorEconomicSurvivalIsHumanitarianInterest a rdf:Property ; rdfs:range xsd:boolean .
+hro:attributableBenefit a rdf:Property .
+hro:creatorLoss a rdf:Property .
+hro:enforcementCost a rdf:Property .
+hro:fundedBy a rdf:Property ; rdfs:range hro:EnforcementFundingInstrument .
+hro:recoveryPriority a rdf:Property ; rdfs:range xsd:nonNegativeInteger .
+
+# Actions used by generator profiles. Projects may extend this SKOS scheme.
+
+hro:Action a rdfs:Class ; rdfs:subClassOf skos:Concept .
+hro:Inspect a hro:Action .
+hro:Collect a hro:Action .
+hro:Store a hro:Action .
+hro:Process a hro:Action .
+hro:Infer a hro:Action .
+hro:Derive a hro:Action .
+hro:Modify a hro:Action .
+hro:Disclose a hro:Action .
+hro:Publish a hro:Action .
+hro:Delete a hro:Action .
+hro:Audit a hro:Action .
+hro:Delegate a hro:Action .
+hro:Revoke a hro:Action .
+
+# SHACL safeguards
+
+hro:RightsStatementShape a sh:NodeShape ;
+    sh:targetClass hro:RightsStatement ;
+    sh:property [ sh:path hro:position ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path hro:holder ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path hro:counterparty ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path hro:action ; sh:minCount 1 ] ;
+    sh:property [ sh:path hro:resource ; sh:minCount 1 ] ;
+    sh:property [ sh:path hro:authoritySource ; sh:minCount 1 ;
+        sh:message "A rights statement must identify its normative authority; technical capability is not enough."@en ] .
+
+hro:TechnicalInstrumentShape a sh:NodeShape ;
+    sh:targetClass hro:TechnicalInstrument ;
+    sh:property [ sh:path hro:issuer ; sh:minCount 1 ] ;
+    sh:property [ sh:path hro:subject ; sh:minCount 1 ] ;
+    sh:property [ sh:path hro:authoritySource ; sh:minCount 1 ] ;
+    sh:property [ sh:path hro:legalEffect ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path hro:revocationMechanism ; sh:minCount 1 ] .
+
+hro:LedgerPrivacyShape a sh:NodeShape ;
+    sh:targetClass hro:LedgerRecord ;
+    sh:property [ sh:path hro:storesSensitiveData ; sh:hasValue false ;
+        sh:message "Default ledger records must store commitments or protected references, not sensitive content."@en ] .
+
+hro:NoAutonomousAdjudicationShape a sh:NodeShape ;
+    sh:targetClass hro:SmartContractExecution ;
+    sh:property [ sh:path hro:automatedAdjudication ; sh:hasValue false ;
+        sh:message "Executable instruments cannot autonomously adjudicate disputed legal liability."@en ] ;
+    sh:property [ sh:path hro:requiresHumanReview ; sh:hasValue true ] .
+
+hro:CreatorProtectionPolicyShape a sh:NodeShape ;
+    sh:targetClass hro:CreatorProtectionPolicy ;
+    sh:property [ sh:path hro:creator ; sh:minCount 1 ] ;
+    sh:property [ sh:path hro:investment ; sh:minCount 1 ] ;
+    sh:property [ sh:path hro:publicInspectionNotPermission ; sh:hasValue true ] ;
+    sh:property [ sh:path hro:technicalAccessNotPermission ; sh:hasValue true ] ;
+    sh:property [ sh:path hro:commercialExploitationRequiresPermission ; sh:hasValue true ] ;
+    sh:property [ sh:path hro:mayRefuseOrConditionLicence ; sh:hasValue true ] ;
+    sh:property [ sh:path hro:excludedAgentsReceiveNoLicence ; sh:hasValue true ] ;
+    sh:property [ sh:path hro:creatorEconomicSurvivalIsHumanitarianInterest ; sh:hasValue true ;
+        sh:message "A humanitarian licensing profile must not treat the creator's material survival as expendable."@en ] .
+
+hro:CreatorInvestmentShape a sh:NodeShape ;
+    sh:targetClass hro:CreatorInvestment ;
+    sh:property [ sh:path hro:contributor ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path hro:investmentCategory ; sh:minCount 1 ; sh:maxCount 1 ] ;
+    sh:property [ sh:path hro:valuationMethod ; sh:minCount 1 ] ;
+    sh:property [ sh:path hro:evidence ; sh:minCount 1 ] ;
+    sh:property [ sh:path hro:recoveryTreatment ; sh:minCount 1 ] .

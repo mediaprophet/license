@@ -1,0 +1,162 @@
+{
+  "$schema": "../schemas/license-profile.schema.json",
+  "schema_version": "1.1",
+  "profile": {
+    "id": "public-inspection-example",
+    "title": "Humanitarian Software Public Inspection Example",
+    "version": "0.1-example",
+    "status": "draft",
+    "created_at": "2026-08-04T00:00:00Z",
+    "description": "Non-operative example showing a natural-person static inspection grant with recorded assent.",
+    "legal_review": {"approved": false, "jurisdictions": ["New South Wales, Australia"], "reviewer": "", "approval_id": "", "expires": ""}
+  },
+  "rights_holder": {
+    "id": "rights-holder", "agent_type": "natural_person", "legal_name": "[Example Rights Holder — replace]",
+    "service_address": "[Service address — replace]", "contact": "[Contact channel — replace]",
+    "licensing_capacity": "Copyright owner or authorised licensor — verify",
+    "title_evidence": ["Rights register and contribution assignments — populate"]
+  },
+  "creator_protection": {
+    "creator_agents": ["rights-holder"],
+    "ownership_and_authority": "The identified natural-person creator retains every copyright and other interest not expressly granted, subject to verified chain of title and mandatory law.",
+    "public_inspection_not_permission": true,
+    "technical_access_not_permission": true,
+    "commercial_exploitation_requires_permission": true,
+    "ai_use_requires_express_permission": true,
+    "may_refuse_or_condition_licence": true,
+    "excluded_agents_receive_no_licence": true,
+    "creator_economic_survival_is_humanitarian_interest": true,
+    "provenance_required": true,
+    "investments": [
+      {"id": "creator-labour", "contributor": "rights-holder", "category": "human_labour", "description": "Research, design, implementation, documentation, testing, curation, and governance work invested by the creator.", "valuation_method": "Contemporaneous hours at the creator's evidenced professional replacement rate, without treating unpaid labour as valueless.", "evidence": ["Version history", "Work logs", "Authorship and provenance records"], "recovery_treatment": "Relevant to licensing price, actual loss, opportunity loss, negotiated compensation, settlement, and any remedy permitted by law."},
+      {"id": "creator-compute", "contributor": "rights-holder", "category": "compute_and_tokens", "description": "LLM tokens, compute, storage, network, software, and related technical resources paid for or supplied by the creator.", "valuation_method": "Invoices, usage records, replacement cost, and attributable infrastructure cost.", "evidence": ["Provider invoices", "Token and compute usage logs", "Infrastructure records"], "recovery_treatment": "Relevant to creator investment, commercial licence valuation, loss, and lawfully recoverable response costs."},
+      {"id": "creator-opportunity", "contributor": "rights-holder", "category": "opportunity_cost", "description": "Alternative paid work, financing, and productive opportunities displaced by development of the Work.", "valuation_method": "Documented comparable engagements, foregone revenue, and evidence-supported economic analysis.", "evidence": ["Comparable rates", "Project timeline", "Foregone engagement records"], "recovery_treatment": "Claimed only where the applicable cause of action permits it and proof, causation, remoteness, and mitigation requirements are met."}
+    ],
+    "ai_contribution_policy": "Record human plans, prompts, source materials, selections, corrections, integration, testing, and final authorship decisions separately from machine output and provider rights; no permission for model training, embedding, retrieval ingestion, fine-tuning, evaluation, or synthetic derivation is implied."
+  },
+  "work": {
+    "id": "inspectable-work", "title": "[Inspectable Work — replace]", "release_id": "0.1-example",
+    "sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "manifest_uri": "[Release manifest URI — replace]", "publicly_inspectable": true, "third_party_material": []
+  },
+  "jurisdiction": {
+    "governing_law": "New South Wales, Australia — draft selection",
+    "forum": "Courts with competent jurisdiction in New South Wales — review",
+    "relevant_regions": ["Australia", "Any access location"], "mandatory_law_review": true, "trade_law_review": false
+  },
+  "release_phase": "public_inspection",
+  "formation": {
+    "mode": "click-accepted", "offer": "Complete versioned terms and schedules displayed before controlled download.",
+    "acceptance_action": "Unticked I-agree control followed by issuance of a durable receipt.", "intention": true,
+    "consideration": "Controlled access and reciprocal contractual promises — counsel to confirm.",
+    "identity_evidence": ["Verified account identifier", "Acceptance timestamp"],
+    "authority_evidence": ["Personal-capacity declaration"], "terms_version_binding": true, "receipt_required": true
+  },
+  "agents": [
+    {"id": "rights-holder", "agent_type": "natural_person", "name": "Example rights holder", "roles": ["licensor", "offeror", "accountable reviewer"], "principal": null, "accountable_human_review": true},
+    {"id": "eligible-inspector", "agent_type": "natural_person", "name": "Eligible natural-person inspector", "roles": ["offeree", "inspector"], "principal": null, "accountable_human_review": true}
+  ],
+  "resources": [
+    {"id": "inspectable-work", "name": "Identified source release", "categories": ["copyright_work", "source_code", "documentation"], "sensitivity": "publicly inspectable but operational use withheld", "authority_sources": ["copyright", "accepted public inspection contract"], "persistence_class": "grant_gated"}
+  ],
+  "rights_relations": [
+    {
+      "id": "inspection-privilege", "position": "privilege", "holder": "eligible-inspector", "counterparty": "rights-holder",
+      "action": "inspect", "resource": "inspectable-work", "purpose": "personal static security and content inspection",
+      "context": "identified release; non-operational environment; personal capacity", "authority_sources": ["accepted-contract", "copyright-licence"],
+      "legal_instruments": ["contract-and-ip-licence"], "technical_instruments": ["inspection-acceptance-receipt"],
+      "conditions": ["No execution", "No organisational agency", "No redistribution"],
+      "validity": "From accepted receipt until valid termination; accrued claims and evidence survive.", "delegation_depth": 0,
+      "evidence": ["Acceptance receipt", "Terms hash", "Release hash"], "verification_status": "proposed",
+      "remedy": ["Notice", "Human review", "Correction", "Dispute process"]
+    },
+    {
+      "id": "no-operation-claim", "position": "claim", "holder": "rights-holder", "counterparty": "eligible-inspector",
+      "action": "refrain-from-operation", "resource": "inspectable-work", "purpose": "prevent unapproved operation during incubation",
+      "context": "all environments and systems", "authority_sources": ["copyright-grant-boundary", "accepted-contract"],
+      "legal_instruments": ["contract-and-ip-licence"], "technical_instruments": ["inspection-acceptance-receipt"],
+      "conditions": ["Mandatory statutory exceptions preserved"],
+      "validity": "While the restriction remains applicable; evidence and accrued claims survive.", "delegation_depth": 0,
+      "evidence": ["Release manifest", "Accepted terms"], "verification_status": "proposed",
+      "remedy": ["Cessation", "Evidence preservation", "Applicable legal relief"]
+    }
+  ],
+  "grant": {
+    "eligible_agents": ["eligible-inspector"], "permitted_actions": ["display", "read", "make one unmodified inspection copy"],
+    "prohibited_actions": ["compile", "execute", "deploy", "modify", "redistribute", "machine-learning ingestion", "remove safeguards"],
+    "purpose": "Personal, non-operational, static inspection and private reporting to the rights holder.",
+    "duration": "Term of copyright unless validly terminated for material breach, subject to law.",
+    "transferable": false, "sublicensable": false,
+    "termination": "Material breach with legally required notice or cure; urgent protective action preserved.", "statutory_savings": true
+  },
+  "humanitarian": {
+    "positive_purposes": ["Transparent security inspection", "Accountable development", "Protection of natural persons"],
+    "prohibited_harms": ["Trafficking or forced labour", "Violence or serious injury", "Coercion or exploitation", "Unlawful surveillance", "Accountability or remedy evasion"],
+    "non_monetisable_harms": true, "affected_person_priority": true, "urgent_protection": true, "human_review": true, "appeal": true
+  },
+  "data_governance": {
+    "enabled": false, "agreement_title": "", "controllers": [], "processors": [], "data_subject_agents": [], "categories": [], "purposes": [],
+    "collection_limitation": "No operational collection or processing is authorised by this inspection profile.",
+    "data_quality": "Not applicable to non-operational inspection.", "use_limitation": "The inspection copy must not process information.",
+    "security_safeguards": [], "openness": "The source and governing terms are inspectable; security reports use the private channel.",
+    "individual_participation": "No personal-data processing is authorised.",
+    "retention_and_deletion": "Delete inspection copies after termination except evidence lawfully required to be preserved.", "transfers": []
+  },
+  "technical_instruments": [
+    {
+      "id": "inspection-acceptance-receipt", "instrument_type": "acceptance_receipt", "issuer": "rights-holder", "subject": "eligible-inspector",
+      "principal": null, "audience": ["rights-holder", "eligible-inspector"], "resource": "inspectable-work",
+      "actions": ["record offer and affirmative acceptance"], "purpose": "Evidence the accepted terms and release identifiers.",
+      "authority_sources": ["accepted-contract"], "legal_effect": "evidence_only",
+      "cryptographic_suite": "Implementation-selected digital signature and SHA-256 artifact hashes; security review required.",
+      "validity": "Permanent evidentiary record subject to privacy and retention law.", "delegation_depth": 0,
+      "revocation": "Receipt is not erased; later status records show rescission, invalidity, termination, or dispute.",
+      "stores_personal_data": true, "human_review": true, "automated_adjudication": false
+    }
+  ],
+  "ledger": {
+    "enabled": true, "technology": "Technology-neutral append-only audit record; production selection pending.",
+    "recording_mode": "hashes_and_protected_references", "stores_sensitive_data": false,
+    "correction_strategy": "Append a signed correction or superseding status linked to the original record.",
+    "revocation_strategy": "Append effective revocation or termination status; deny future capability checks.",
+    "key_compromise_process": "Suspend affected credentials, record compromise, rotate keys, re-verify identity and authority.", "human_review": true
+  },
+  "exclusions": {"active": false, "criteria": [], "legal_basis": "", "evidence": [], "necessity": "", "proportionality": "", "exceptions": [], "expiry": "", "appeal": "", "legal_review": false},
+  "enforcement": {
+    "human_review": true,
+    "notice": "Identify claimant, Work, accepted terms or non-licensee basis, facts, evidence, requested action, and response route.",
+    "cure": "Provide proportionate cure where compatible with safety, continuing-infringement needs, and applicable law.",
+    "urgent_protection": "Permit short urgent suspension or injunctive action to prevent imminent harm, followed by prompt review.",
+    "appeal": "Independent accountable human review with correction and restoration when an allegation fails.",
+    "evidence_preservation": "Preserve release, terms, acceptance, agent, event, notice, response, loss, benefit, and affected-person evidence with provenance.",
+    "affected_person_remedy": "Safety, cessation, restoration, remedy, and non-recurrence precede financial allocation.",
+    "creator_remedy": "Treat the creator as a rights-bearing affected person: stop unauthorised exploitation, preserve proof, restore control, recover supported use value, loss, attributable profit and enforcement cost, and do not subordinate the creator's material interests merely because the exploiter has greater resources.",
+    "non_licensee_notice": "No licence is granted beyond static inspection. Unauthorised operation, copying, modification, AI ingestion, commercialisation, distribution, or other reserved conduct remains subject to copyright and every other applicable remedy; any settlement price is an offer, not immunity from consequences.",
+    "deterrence": {
+      "enabled": true,
+      "objective": "Make deliberate or commercially gainful exploitation economically irrational while restoring the creator and funding practical access to justice.",
+      "protected_interests": ["Creator control over whether, by whom, and for what purpose the Work is used", "Moral and material interests of the natural-person creator", "Recovery of invested labour, compute, capital, opportunity, safety, and enforcement resources", "Prevention of an exploiter retaining gains created through unauthorised use"],
+      "evidence_required": ["Release and ownership provenance", "Scope of permitted and reserved acts", "Creator investment and commercial-pricing records", "Evidence of use, knowledge, benefit, loss, response cost, concealment, recurrence, and post-notice conduct"],
+      "contract_path": "For an assenting licensee, use reviewed price, indemnity, agreed-compensation, audit, suspension, termination, cost-recovery, and dispute clauses tied to identified legitimate interests.",
+      "non_assenter_path": "For an excluded or non-assenting exploiter, pursue injunction, damages, account of profits, additional damages, preservation, platform, regulatory, criminal-referral, or other remedies actually available under applicable law and offer settlement only as a separate voluntary agreement.",
+      "profit_recovery": "Reserve an account of profits or analogous gain-based relief so unauthorised exploitation is not profitable, avoiding legally prohibited double recovery.",
+      "creator_cost_recovery": "Document and claim creator labour, compute, investigation, preservation, professional, enforcement, collection, remediation, and opportunity costs wherever the applicable legal basis permits.",
+      "additional_damages_reservation": "Reserve court-controlled additional, exemplary, aggravated, enhanced, statutory, or deterrent relief where applicable, including for flagrancy, benefit, concealment, recurrence, evidence destruction, or post-notice conduct.",
+      "jurisdictional_review": false
+    },
+    "financial_remedies": [
+      {"id": "copyright-damages", "basis": "statute", "formation_stage": "none_statutory", "requires_assent": false, "remedy_character": "compensatory", "trigger": "Proven infringement or other unauthorised act for which applicable law provides damages.", "legitimate_interest": "Restore the creator for loss caused by unauthorised exploitation and vindicate control over reserved acts.", "creator_interest_components": ["Lost licensing value", "Lost opportunity", "Market and reputational harm", "Documented creator investment impaired by the conduct"], "valuation_method": "Court-accepted evidence of loss, reasonable royalty or licence value, market impact, causation, mitigation, and applicable statutory factors.", "evidence_basis": ["Ownership and release evidence", "Use and causation evidence", "Pricing and loss evidence"], "proportionality_analysis": "Amount is determined under the applicable cause of action and court-controlled standards.", "amount_or_range": "Amount proved or assessed under applicable law.", "causal_link": "Loss must be connected to the proved conduct to the extent required by the applicable cause of action.", "cap": "Any limit imposed by applicable law; no voluntary project cap.", "duplication_group": "same-loss-and-benefit", "becomes_payable_when": "A settlement, judgment, order, or other legally sufficient event makes the amount due.", "review_and_dispute": "Notice where appropriate, evidence access, accountable human review, and determination by an agreed or competent forum.", "legal_review": false},
+      {"id": "account-of-exploiter-profits", "basis": "account_of_profits", "formation_stage": "none_statutory", "requires_assent": false, "remedy_character": "restitutionary", "trigger": "Proven unauthorised exploitation for which gain-based relief is available.", "legitimate_interest": "Prevent the exploiter from retaining profits attributable to use of the creator's protected Work.", "creator_interest_components": ["Attributable revenue", "Avoided development and licensing costs", "Commercial advantage derived from the Work"], "valuation_method": "Disclosure, audit, tracing, apportionment, avoided-cost and profit evidence under the governing remedy.", "evidence_basis": ["Revenue and cost records", "Product and deployment records", "Causal and apportionment evidence"], "proportionality_analysis": "Recover only gain attributable under applicable law and credit overlapping recovery where required.", "amount_or_range": "Attributable profit or gain assessed under applicable law.", "causal_link": "The claimed benefit must be attributable to the unauthorised conduct under the governing test.", "cap": "The recoverable attributable gain and any legal limit.", "duplication_group": "same-loss-and-benefit", "becomes_payable_when": "A settlement, judgment, order, or other legally sufficient event makes the amount due.", "review_and_dispute": "Disclosure and accounting subject to human review and competent adjudication.", "legal_review": false},
+      {"id": "additional-deterrent-damages", "basis": "additional_damages", "formation_stage": "judgment_or_order", "requires_assent": false, "remedy_character": "deterrent", "trigger": "A competent court finds the statutory or other conditions for additional or enhanced damages satisfied.", "legitimate_interest": "Deter flagrant, concealed, repeated, gainful, evidence-destroying, or post-notice exploitation and protect the practical value of the creator's rights.", "creator_interest_components": ["Flagrancy and knowledge", "Benefit to the exploiter", "Deterrence", "Creator vulnerability and enforcement burden"], "valuation_method": "Court-controlled assessment under current applicable law, supported by preserved evidence.", "evidence_basis": ["Knowledge and notice", "Benefit and scale", "Concealment, recurrence, evidence destruction, and post-notice conduct"], "proportionality_analysis": "The decision and amount remain for the competent court under the governing statutory criteria.", "amount_or_range": "Amount the competent court considers appropriate.", "causal_link": "As required by the statutory or other governing basis.", "cap": "Any limit imposed by applicable law; no private representation of a court-imposed fine.", "duplication_group": "additional-deterrence", "becomes_payable_when": "Ordered by a competent court or accepted in a settlement.", "review_and_dispute": "Full procedural rights and competent adjudication.", "legal_review": false},
+      {"id": "retroactive-commercial-licence-offer", "basis": "retroactive_licence_offer", "formation_stage": "post_event_agreement", "requires_assent": true, "remedy_character": "settlement_price", "trigger": "The rights holder elects to offer settlement without being required to license a prohibited or unsafe use.", "legitimate_interest": "Price past unauthorised commercial exposure above an ordinary advance licence because it includes lost choice, investigation, uncertainty, administration, and enforcement risk.", "creator_interest_components": ["Ordinary commercial licence price", "Duration, scale, territory, users and revenue", "Creator investment", "Investigation and settlement cost", "Risk and lost bargaining opportunity"], "valuation_method": "Evidence-based ordinary commercial price plus supported incremental components, with a documented legitimate-interest and proportionality analysis.", "evidence_basis": ["Comparable licence terms", "Creator cost register", "Scale and benefit evidence", "Response costs"], "proportionality_analysis": "The offer must be supportable and reviewed but need not equal the price that would have been offered before unauthorised use; acceptance is voluntary and refusal preserves existing claims.", "amount_or_range": "Creator-set evidence-supported settlement price, subject to legal review before use.", "causal_link": "Components must relate to the event, lost choice, exposure, benefit, or supported response burden.", "cap": "Evidence-supported negotiated cap or no offer; applicable law controls enforceability.", "duplication_group": "same-loss-and-benefit", "becomes_payable_when": "The identified settlement or retroactive-licence offer is accepted through a valid agreement.", "review_and_dispute": "The recipient may reject the offer and contest the underlying claim in the competent forum; rejection does not create a debt.", "legal_review": false}
+    ],
+    "enforcement_funding": {"enabled": true, "mechanisms": ["creator_reserve", "conditional_fee", "litigation_funding", "recovery_contingent_enforcement_reward", "rights_management_agent"], "separate_agreement_required": true, "creator_control_preserved": true, "professional_rules_review": false, "allocation": "A reviewed separate agreement may pay an enforcement provider or funder from actual recovery after creator-approved costs and priorities; the licence records the permitted model but does not appoint a provider by itself.", "safeguards": ["No funder may force settlement, abandonment, misstatement, harassment, or action contrary to creator instructions and professional duties", "Compensation, commission, uplift, referral reward, costs and termination rights must be transparent and jurisdictionally lawful", "No reward arises from accusation alone; payment depends on verified recovery under the separate agreement", "Conflicts, privilege, confidentiality, adverse costs and security for costs must be reviewed"], "legal_review": false},
+    "recovery_waterfall": ["Urgent protection and restoration for every affected natural person, expressly including the creator", "Creator/rightsholder restitution for lost use value, proven loss, impaired investment, diverted opportunity, and attributable gain", "Reasonable investigation, preservation, legal, enforcement, funding, collection, and remediation costs", "Unpaid obligations to contributors directly connected with the exploited Work", "Creator-controlled enforcement and continuity reserve", "Other adopted humanitarian purposes only after the preceding interests are satisfied"]
+  },
+  "sources": [
+    {"id": "webcivics-jural", "title": "Web Civics Hohfeldian Jural Relations", "uri": "https://ns.webcivics.net/jural/", "source_type": "ontology", "binding_status": "Curated semantic vocabulary; not itself governing law.", "version": "Catalog snapshot 2026-07-24", "mapping_status": "human_attested"},
+    {"id": "icescr-article-15", "title": "International Covenant on Economic, Social and Cultural Rights — article 15", "uri": "https://2covenants.ohchr.org/About-ICESCR.html", "source_type": "treaty", "binding_status": "Human-rights treaty obligation of States Parties; private-law route and domestic effect require jurisdiction-specific analysis.", "version": "Official OHCHR text checked 2026-08-04", "mapping_status": "summarised"},
+    {"id": "cescr-general-comment-17", "title": "CESCR General Comment No. 17 — authors' moral and material interests", "uri": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/TBSearch.aspx?SymbolNo=E%2FC.12%2FGC%2F17", "source_type": "general_comment", "binding_status": "Authoritative treaty-body interpretation; not by itself a private damages tariff or contract.", "version": "E/C.12/GC/17 (2005)", "mapping_status": "summarised"},
+    {"id": "australian-copyright-act", "title": "Copyright Act 1968 (Cth)", "uri": "https://www.legislation.gov.au/C1968A00063/latest/text", "source_type": "statute", "binding_status": "Applicable status requires jurisdictional facts and current legal review.", "version": "Current text to be checked at adoption", "mapping_status": "summarised"}
+  ]
+}

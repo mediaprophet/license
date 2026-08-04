@@ -1,0 +1,8 @@
+[project]
+name = "humanitarian-rights-licence-generator"
+version = "0.2.0"
+description = "Dependency-free validator and document assembler for rights-ontology licence profiles"
+requires-python = ">=3.11"
+
+[tool.unittest]
+start-directory = "tests"

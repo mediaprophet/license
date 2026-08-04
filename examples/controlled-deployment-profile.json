@@ -1,0 +1,234 @@
+{
+  "$schema": "../schemas/license-profile.schema.json",
+  "schema_version": "1.1",
+  "profile": {
+    "id": "controlled-deployment-example",
+    "title": "Rights-Ontology Controlled Humanitarian Deployment Example",
+    "version": "0.1-example",
+    "status": "draft",
+    "created_at": "2026-08-04T00:00:00Z",
+    "description": "Non-operative example showing different rights for human, legal, storage, analysis, and audit agents over shared information.",
+    "legal_review": {"approved": false, "jurisdictions": ["Australia", "New Zealand"], "reviewer": "", "approval_id": "", "expires": ""}
+  },
+  "rights_holder": {
+    "id": "rights-holder", "agent_type": "natural_person", "legal_name": "[Example Rights Holder — replace]",
+    "service_address": "[Service address — replace]", "contact": "[Contact channel — replace]",
+    "licensing_capacity": "Copyright owner or authorised licensor — verify",
+    "title_evidence": ["Rights register and contributor instruments — populate"]
+  },
+  "creator_protection": {
+    "creator_agents": ["rights-holder"],
+    "ownership_and_authority": "The identified creator and rights holder retains every interest not expressly granted and controls whether commercial or operational permission is offered, subject to verified title and mandatory law.",
+    "public_inspection_not_permission": true, "technical_access_not_permission": true,
+    "commercial_exploitation_requires_permission": true, "ai_use_requires_express_permission": true,
+    "may_refuse_or_condition_licence": true, "excluded_agents_receive_no_licence": true,
+    "creator_economic_survival_is_humanitarian_interest": true, "provenance_required": true,
+    "investments": [
+      {"id": "deployment-creator-labour", "contributor": "rights-holder", "category": "human_labour", "description": "Historical and current research, design, engineering, documentation, governance, testing, negotiation, and maintenance labour.", "valuation_method": "Contemporaneous hours, professional replacement rates, comparable engagements, and evidenced commercial value.", "evidence": ["Repository and document history", "Work and time records", "Comparable professional rates"], "recovery_treatment": "Relevant to negotiated price, agreed compensation, proven loss, settlement, and remedies available under law."},
+      {"id": "deployment-compute", "contributor": "rights-holder", "category": "compute_and_tokens", "description": "LLM tokens, compute, storage, network, software, and technical services funded or supplied for development.", "valuation_method": "Invoices, usage logs, replacement cost, and attributable infrastructure allocation.", "evidence": ["Provider invoices", "Token and compute logs", "Hosting records"], "recovery_treatment": "Included in investment and pricing evidence and claimed where the selected remedy permits."},
+      {"id": "deployment-compliance", "contributor": "rights-holder", "category": "safety_and_compliance", "description": "Humanitarian, privacy, security, transborder, ontology, licensing, and assurance work necessary for responsible deployment.", "valuation_method": "Actual expenditure and professional replacement cost.", "evidence": ["Review records", "Professional invoices", "Assessment and test artifacts"], "recovery_treatment": "Protected investment relevant to licence value, loss, response cost, and negotiated remedies."}
+    ],
+    "ai_contribution_policy": "Preserve human planning, prompts, source inputs, selections, corrections, integration, validation, and authorship evidence; provider terms must be reviewed and no model training, embedding, fine-tuning, evaluation, retrieval ingestion, or derivation permission is implied."
+  },
+  "work": {
+    "id": "deployable-work", "title": "[Humanitarian System — replace]", "release_id": "0.1-deployment-example",
+    "sha256": "1111111111111111111111111111111111111111111111111111111111111111",
+    "manifest_uri": "[Release manifest URI — replace]", "publicly_inspectable": true, "third_party_material": []
+  },
+  "jurisdiction": {
+    "governing_law": "New South Wales, Australia — draft selection",
+    "forum": "Competent courts in New South Wales, without removing mandatory local remedies — review",
+    "relevant_regions": ["Australia", "New Zealand", "Each place of access, processing, effect, or affected-person presence"],
+    "mandatory_law_review": true, "trade_law_review": true
+  },
+  "release_phase": "controlled_deployment",
+  "formation": {
+    "mode": "negotiated", "offer": "Complete negotiated deployment terms and every incorporated schedule.",
+    "acceptance_action": "Authorised signatures of identified parties with versioned artifact hashes.", "intention": true,
+    "consideration": "Negotiated reciprocal promises, controlled deployment permission, services, and payment — counsel to settle.",
+    "identity_evidence": ["Verified signatory identities", "Entity registration", "Signature validation"],
+    "authority_evidence": ["Board or delegated authority", "Principal and operator disclosure"],
+    "terms_version_binding": true, "receipt_required": true
+  },
+  "agents": [
+    {"id": "rights-holder", "agent_type": "natural_person", "name": "Example rights holder", "roles": ["licensor", "rights-ontology steward"], "principal": null, "accountable_human_review": true},
+    {"id": "deployment-operator", "agent_type": "legal_person", "name": "Example deployment operator", "roles": ["licensee", "controller", "principal", "exporter"], "principal": null, "accountable_human_review": true},
+    {"id": "participating-person", "agent_type": "natural_person", "name": "Participating or affected natural person", "roles": ["data subject", "rights holder", "participant"], "principal": null, "accountable_human_review": true},
+    {"id": "storage-provider", "agent_type": "legal_person", "name": "Example storage provider", "roles": ["processor", "importer", "service provider"], "principal": null, "accountable_human_review": true},
+    {"id": "storage-agent", "agent_type": "artificial_agent", "name": "Storage software agent", "roles": ["custody agent"], "principal": "storage-provider", "accountable_human_review": true},
+    {"id": "analysis-agent", "agent_type": "artificial_agent", "name": "Purpose-bound analysis agent", "roles": ["analysis agent"], "principal": "deployment-operator", "accountable_human_review": true},
+    {"id": "independent-auditor", "agent_type": "legal_person", "name": "Independent auditor", "roles": ["auditor", "confidential reviewer"], "principal": null, "accountable_human_review": true}
+  ],
+  "resources": [
+    {"id": "deployable-work", "name": "Identified software release", "categories": ["copyright_work", "source_code", "software"], "sensitivity": "publicly inspectable source; controlled operational permission", "authority_sources": ["copyright", "contract-and-ip-licence"], "persistence_class": "grant_gated"},
+    {"id": "person-record", "name": "Participating person's private record", "categories": ["personal_data", "confidential_information", "participant_contribution"], "sensitivity": "sensitive personal and confidential information", "authority_sources": ["applicable privacy law", "rights-governed information agreement", "valid authority source per processing purpose"], "persistence_class": "co_owned_record"},
+    {"id": "aggregate-output", "name": "Approved de-identified aggregate output", "categories": ["derived_artifact", "statistical_output"], "sensitivity": "release-controlled and subject to re-identification assessment", "authority_sources": ["rights-governed information agreement", "approved derivation policy"], "persistence_class": "artifact_attached_rule"}
+  ],
+  "rights_relations": [
+    {
+      "id": "operator-deployment-privilege", "position": "privilege", "holder": "deployment-operator", "counterparty": "rights-holder",
+      "action": "deploy and operate", "resource": "deployable-work", "purpose": "the approved humanitarian service only",
+      "context": "approved systems, locations, users, controls, and term", "authority_sources": ["accepted-contract", "copyright-licence"],
+      "legal_instruments": ["contract-and-ip-licence"], "technical_instruments": ["deployment-entitlement-token"],
+      "conditions": ["No Prohibited Harm", "Maintain accountable operators", "Comply with rights-ontology schedule"],
+      "validity": "Approved deployment term, subject to suspension and valid termination.", "delegation_depth": 0,
+      "evidence": ["Signed contract", "Release hash", "Deployment register"], "verification_status": "proposed",
+      "remedy": ["Notice", "Protective suspension", "Human review", "Restoration or lawful relief"]
+    },
+    {
+      "id": "person-protection-claim", "position": "claim", "holder": "participating-person", "counterparty": "deployment-operator",
+      "action": "protect and purpose-limit", "resource": "person-record", "purpose": "protect dignity, agency, confidentiality, and agreed participation",
+      "context": "entire data value cycle and all locations", "authority_sources": ["applicable-law", "rights-governed-information-agreement", "valid-consent-where-applicable"],
+      "legal_instruments": ["rights-governed-information-agreement", "transborder-transfer-schedule"],
+      "technical_instruments": ["participant-consent-token", "rights-event-ledger"],
+      "conditions": ["Consent is scoped and not the only possible legal basis", "Mandatory rights are preserved"],
+      "validity": "According to each authority source; artifact-attached protections and accrued claims survive exit.", "delegation_depth": 0,
+      "evidence": ["Privacy notice", "Purpose record", "Authority and processing logs"], "verification_status": "proposed",
+      "remedy": ["Access", "Correction", "Restriction", "Restoration", "Complaint", "External relief"]
+    },
+    {
+      "id": "storage-security-duty", "position": "duty", "holder": "storage-provider", "counterparty": "participating-person",
+      "action": "securely store without independent use", "resource": "person-record", "purpose": "provide purpose-bound custody for the approved service",
+      "context": "approved New Zealand environment and authorised support access", "authority_sources": ["processor-contract", "applicable-privacy-law"],
+      "legal_instruments": ["rights-governed-information-agreement", "transborder-transfer-schedule"],
+      "technical_instruments": ["storage-capability-token", "rights-event-ledger"],
+      "conditions": ["No independent benefit use", "No onward transfer without authority", "Encryption and access segmentation"],
+      "validity": "During processing and through return, deletion, or legally required retention.", "delegation_depth": 0,
+      "evidence": ["Access logs", "Security attestations", "Deletion records"], "verification_status": "proposed",
+      "remedy": ["Containment", "Notification", "Correction", "Deletion", "Compensation where lawfully available"]
+    },
+    {
+      "id": "analysis-limited-privilege", "position": "privilege", "holder": "analysis-agent", "counterparty": "participating-person",
+      "action": "derive approved aggregate", "resource": "person-record", "purpose": "produce the defined humanitarian service aggregate",
+      "context": "isolated approved computation with accountable operator review", "authority_sources": ["operator-delegation", "rights-governed-information-agreement"],
+      "legal_instruments": ["rights-governed-information-agreement"], "technical_instruments": ["analysis-capability-token"],
+      "conditions": ["No re-identification", "No model training", "No independent disclosure", "Output review required"],
+      "validity": "Single approved processing window; capability expires and is revocable.", "delegation_depth": 0,
+      "evidence": ["Capability scope", "Execution log", "Human output approval"], "verification_status": "proposed",
+      "remedy": ["Immediate revocation", "Quarantine output", "Investigation", "Affected-person remedy"]
+    },
+    {
+      "id": "no-publication-immunity", "position": "immunity", "holder": "participating-person", "counterparty": "deployment-operator",
+      "action": "prevent unilateral publication", "resource": "person-record", "purpose": "preserve confidentiality and agency",
+      "context": "during and after participation unless a valid external authority applies", "authority_sources": ["applicable-law", "artifact-attached-contractual-rule"],
+      "legal_instruments": ["rights-governed-information-agreement"], "technical_instruments": ["rights-event-ledger"],
+      "conditions": ["Lawful compulsory process handled under the government-access procedure"],
+      "validity": "Travels with the record and derived artifacts according to the persistence rule.", "delegation_depth": 0,
+      "evidence": ["Rights schedule", "Artifact provenance"], "verification_status": "proposed",
+      "remedy": ["Prevent publication", "Takedown", "Restoration", "Effective external remedy"]
+    },
+    {
+      "id": "participant-withdrawal-power", "position": "power", "holder": "participating-person", "counterparty": "deployment-operator",
+      "action": "withdraw future consent-scoped processing", "resource": "person-record", "purpose": "preserve self-determination",
+      "context": "processing whose authority source is withdrawable consent", "authority_sources": ["valid-consent", "applicable-law"],
+      "legal_instruments": ["rights-governed-information-agreement"], "technical_instruments": ["participant-consent-token", "rights-event-ledger"],
+      "conditions": ["Withdrawal does not erase past lawful processing or independent mandatory duties", "Other asserted legal bases require separate review"],
+      "validity": "While the consent relation exists and according to applicable law.", "delegation_depth": 0,
+      "evidence": ["Authenticated withdrawal", "Effective-time record"], "verification_status": "proposed",
+      "remedy": ["Stop future consent-based processing", "Propagate withdrawal", "Review non-compliance"]
+    },
+    {
+      "id": "creator-control-and-compensation-claim", "position": "claim", "holder": "rights-holder", "counterparty": "deployment-operator",
+      "action": "respect grant boundaries, creator choice, attribution, material interests, investment, compensation, audit, and remedies", "resource": "deployable-work", "purpose": "prevent the creator being compelled to subsidise or surrender control to an exploiter",
+      "context": "all inspection, access, installation, operation, modification, AI use, disclosure, commercialisation, termination, and post-termination conduct", "authority_sources": ["copyright-and-other-applicable-law", "accepted-contract", "creator-moral-and-material-interests"],
+      "legal_instruments": ["contract-and-ip-licence", "creator-interests-and-investment-schedule", "enforcement-and-remedies-schedule"], "technical_instruments": ["deployment-entitlement-token", "rights-event-ledger"],
+      "conditions": ["Only express permissions are granted", "Technical access is not permission", "Excluded or unauthorised use receives no licence", "Payment cannot purchase Prohibited Harm"],
+      "validity": "Throughout the grant and for every ownership, attribution, evidence, accrued-claim, confidentiality, audit, and remedy interest that survives.", "delegation_depth": 0,
+      "evidence": ["Title and provenance register", "Creator investment register", "Accepted terms and receipt", "Use, benefit, loss, impact and enforcement records"], "verification_status": "proposed",
+      "remedy": ["Refuse or condition permission", "Suspend or terminate", "Injunction or cessation", "Damages or agreed compensation", "Account of profits", "Additional damages where available", "Reasonable enforcement-cost recovery", "Creator-first restitution"]
+    }
+  ],
+  "grant": {
+    "eligible_agents": ["deployment-operator"],
+    "permitted_actions": ["install approved release", "execute in approved environment", "provide approved humanitarian service", "permit bounded agent processing defined by the rights schedule"],
+    "prohibited_actions": ["unapproved deployment", "redistribution", "unapproved modification", "machine-learning training", "remove safeguards", "cause or facilitate a Prohibited Harm"],
+    "purpose": "Operate the identified release solely for the negotiated humanitarian service and rights-governed information relations.",
+    "duration": "[Negotiated term — replace]", "transferable": false, "sublicensable": false,
+    "termination": "Material breach, safety suspension, expiry, or agreed event, with persistence of protected records, rights, evidence, and accrued claims.",
+    "statutory_savings": true
+  },
+  "humanitarian": {
+    "positive_purposes": ["Provide the defined humanitarian service", "Strengthen natural-person agency", "Enable accountable and secure participation"],
+    "prohibited_harms": ["Trafficking, slavery, or forced labour", "Violence, serious injury, or exploitation", "Coercive or discriminatory decision-making", "Unlawful surveillance or disclosure", "Accountability, evidence, or remedy evasion"],
+    "non_monetisable_harms": true, "affected_person_priority": true, "urgent_protection": true, "human_review": true, "appeal": true
+  },
+  "data_governance": {
+    "enabled": true, "agreement_title": "Rights-Governed Information and Transborder Processing Agreement",
+    "controllers": ["deployment-operator"], "processors": ["storage-provider", "storage-agent", "analysis-agent"],
+    "data_subject_agents": ["participating-person"],
+    "categories": ["identity and contact data", "private participant records", "service-use records", "security and provenance logs", "approved aggregate outputs"],
+    "purposes": ["provide the defined humanitarian service", "protect security and integrity", "support participant rights and accountable audit"],
+    "collection_limitation": "Collect only documented fields necessary for an approved purpose through lawful and fair means with required knowledge or consent.",
+    "data_quality": "Provide correction and downstream propagation appropriate to purpose, risk, and applicable law.",
+    "use_limitation": "No incompatible purpose, independent processor benefit, advertising, model training, re-identification, or onward disclosure without a separately valid authority source.",
+    "security_safeguards": ["Encryption in transit and at rest with reviewed key control", "Purpose-bound capability tokens", "Least privilege and segmentation", "Tamper-evident protected audit events", "Incident response and continuity testing"],
+    "openness": "Publish intelligible information about accountable parties, categories, purposes, locations, recipients, retention, government access, rights, and remedies.",
+    "individual_participation": "Provide confirmation, access, correction, challenge, reasons, complaint, representation, and effective remedy subject to applicable law and protected third-party interests.",
+    "retention_and_deletion": "Use purpose- and law-specific periods; revoke access promptly on exit; preserve third-party-anchored, co-owned, evidentiary, and artifact-attached interests as validly required.",
+    "transfers": [
+      {
+        "id": "australia-to-new-zealand-storage", "exporter": "deployment-operator", "importer": "storage-provider",
+        "origin": "Australia", "destination": "New Zealand", "data_categories": ["private participant records", "security and provenance logs"],
+        "purpose": "Encrypted purpose-bound storage and availability for the approved service",
+        "mechanism": "[Applicable lawful transfer mechanism and version — counsel to replace]", "remote_access": true,
+        "onward_transfer": "Prohibited without prior recorded authority, equivalent flow-down rights, updated assessment, and participant/regulator steps required by law.",
+        "continuing_protection": "Importer accepts equivalent purpose, security, participation, audit, deletion, government-demand, and remedy duties.",
+        "government_access_assessment": {
+          "completed": true,
+          "legal_basis": "Example-only destination-law assessment record — replace with current qualified review.",
+          "necessity_and_proportionality": "Example-only assessment of scope, standards, minimisation, and challenge — replace.",
+          "oversight": "Example-only identification of approval and independent oversight — replace.",
+          "transparency": "Example-only notification and aggregate reporting analysis — replace.",
+          "redress": "Example-only identification of complaint, court, and regulator mechanisms — replace."
+        },
+        "localisation_review": true,
+        "suspension_trigger": "Suspend new transfer when the mechanism, destination assessment, safeguards, or effective remedy ceases to provide required continuing protection.",
+        "legal_review": false
+      }
+    ]
+  },
+  "technical_instruments": [
+    {"id": "deployment-entitlement-token", "instrument_type": "licence_entitlement_token", "issuer": "rights-holder", "subject": "deployment-operator", "principal": null, "audience": ["deployment-operator"], "resource": "deployable-work", "actions": ["install", "execute approved release"], "purpose": "Enforce the accepted deployment scope.", "authority_sources": ["accepted-contract", "copyright-licence"], "legal_effect": "contractually_recognised", "cryptographic_suite": "Implementation-selected verifiable credential and artifact hashes; security and legal review required.", "validity": "Negotiated term and deployment status.", "delegation_depth": 0, "revocation": "Rights-holder suspension/revocation endpoint plus human review and appeal.", "stores_personal_data": false, "human_review": true, "automated_adjudication": false},
+    {"id": "storage-capability-token", "instrument_type": "capability_token", "issuer": "deployment-operator", "subject": "storage-agent", "principal": "storage-provider", "audience": ["storage-agent"], "resource": "person-record", "actions": ["encrypt", "store", "return", "delete on authorised instruction"], "purpose": "Purpose-bound custody only.", "authority_sources": ["processor-contract", "operator-instruction"], "legal_effect": "access_control_effect", "cryptographic_suite": "Short-lived audience-bound capability with proof-of-possession; implementation review required.", "validity": "Short-lived and rotated; no authority after revocation or expiry.", "delegation_depth": 0, "revocation": "Online status and immediate access-control denial with recorded reason and review.", "stores_personal_data": false, "human_review": true, "automated_adjudication": false},
+    {"id": "analysis-capability-token", "instrument_type": "capability_token", "issuer": "deployment-operator", "subject": "analysis-agent", "principal": "deployment-operator", "audience": ["analysis-agent"], "resource": "person-record", "actions": ["derive approved aggregate"], "purpose": "Single approved humanitarian analysis.", "authority_sources": ["rights-governed-information-agreement", "operator-delegation"], "legal_effect": "access_control_effect", "cryptographic_suite": "One-use audience- and purpose-bound capability; implementation review required.", "validity": "Single processing window.", "delegation_depth": 0, "revocation": "Immediate denial and output quarantine.", "stores_personal_data": false, "human_review": true, "automated_adjudication": false},
+    {"id": "participant-consent-token", "instrument_type": "consent_token", "issuer": "participating-person", "subject": "deployment-operator", "principal": null, "audience": ["deployment-operator"], "resource": "person-record", "actions": ["record specific consent assertion and withdrawal"], "purpose": "Evidence one identified consent scope where consent is the selected valid authority source.", "authority_sources": ["valid-consent-subject-to-law"], "legal_effect": "evidence_only", "cryptographic_suite": "Signed consent receipt with privacy-preserving subject reference; implementation review required.", "validity": "Scope- and time-bound; future use stops on effective withdrawal where consent is the basis.", "delegation_depth": 0, "revocation": "Authenticated withdrawal appends a superseding status and propagates to affected capabilities.", "stores_personal_data": false, "human_review": true, "automated_adjudication": false},
+    {"id": "rights-event-ledger", "instrument_type": "ledger_record", "issuer": "deployment-operator", "subject": "participating-person", "principal": null, "audience": ["deployment-operator", "participating-person", "independent-auditor"], "resource": "person-record", "actions": ["record protected rights and lifecycle events"], "purpose": "Tamper-evident evidence of authority, access, disclosure, correction, withdrawal, incident, and remedy events.", "authority_sources": ["rights-governed-information-agreement", "applicable-recordkeeping-law"], "legal_effect": "evidence_only", "cryptographic_suite": "Permissioned append-only record of hashes and protected references; implementation review required.", "validity": "Purpose- and law-specific retention with contested and superseded statuses.", "delegation_depth": 0, "revocation": "Access can be revoked; historical false assertions receive signed correction records.", "stores_personal_data": false, "human_review": true, "automated_adjudication": false}
+  ],
+  "ledger": {
+    "enabled": true, "technology": "Technology-neutral permissioned append-only event record; production selection pending.",
+    "recording_mode": "hashes_and_protected_references", "stores_sensitive_data": false,
+    "correction_strategy": "Append signed correction, dispute, or superseding status; preserve provenance and restricted underlying evidence.",
+    "revocation_strategy": "Append revocation effective time and deny future capability validation without erasing history.",
+    "key_compromise_process": "Emergency suspend, mark compromised keys and derived credentials, rotate, re-verify, reissue, notify, investigate, and remediate.",
+    "human_review": true
+  },
+  "exclusions": {"active": false, "criteria": [], "legal_basis": "", "evidence": [], "necessity": "", "proportionality": "", "exceptions": [], "expiry": "", "appeal": "", "legal_review": false},
+  "enforcement": {
+    "human_review": true,
+    "notice": "Identify claimant, relation, authority, legal instrument, facts, evidence, effect, requested protection, and response route.",
+    "cure": "Allow proportionate cure unless incompatible with imminent safety, evidence, continuing harm, or law.",
+    "urgent_protection": "Suspend affected capabilities or transfers to prevent imminent harm, then provide prompt accountable review.",
+    "appeal": "Independent review with accessible participation, reasons, correction, restoration, and external remedies.",
+    "evidence_preservation": "Preserve rights statements, authority, terms, tokens, logs, notices, responses, impacts, costs, and provenance under protected access.",
+    "affected_person_remedy": "Prioritise safety, cessation, restoration, participation, remedy, and non-recurrence before financial allocation.",
+    "creator_remedy": "Restore the creator's control and material position through cessation, supported licence value, loss, investment, attributable-profit and enforcement-cost recovery; do not require the creator to subsidise a better-funded exploiter.",
+    "non_licensee_notice": "Unauthorised use does not create assent or a contractual debt; reserve applicable statutory relief and identify settlement offers accurately.",
+    "deterrence": {"enabled": true, "objective": "Protect creator autonomy and make deliberate, harmful, or gainful misuse economically unattractive without allowing payment to purchase Prohibited Harm.", "protected_interests": ["Creator choice and bargaining position", "Moral and material interests", "Invested labour, compute, capital, opportunity, safety and compliance resources", "Affected-person safety and system integrity", "Practical access to enforcement"], "evidence_required": ["Title and release provenance", "Accepted terms and scope", "Creator investment and pricing evidence", "Use, benefit, loss, impact, response cost, knowledge, concealment, recurrence and post-notice evidence"], "contract_path": "Use negotiated pricing, audit, indemnity, agreed compensation, suspension, termination, cost recovery and dispute terms under an accepted agreement.", "non_assenter_path": "Use statutory and other non-contractual remedies, including injunction, damages, account of profits, additional damages and competent criminal or regulatory referral where the law applies; a later settlement remains voluntary.", "profit_recovery": "Seek gain-based relief where available so the exploiter does not retain attributable profit, with required apportionment and non-duplication.", "creator_cost_recovery": "Claim supported creator labour, compute, opportunity, investigation, preservation, professional, enforcement, funding, collection and remediation costs wherever recoverable.", "additional_damages_reservation": "Reserve court-controlled additional or enhanced relief for relevant flagrancy, benefit, concealment, recurrence, vulnerability targeting, evidence destruction and post-notice conduct.", "jurisdictional_review": false},
+    "financial_remedies": [
+      {"id": "supported-agreed-compensation", "basis": "agreed_compensation", "formation_stage": "pre_event_contract", "requires_assent": true, "remedy_character": "deterrent", "trigger": "A counsel-defined material breach or use outside the accepted deployment scope after accountable factual review.", "legitimate_interest": "Protect creator choice, bargaining position, invested resources, affected persons, system integrity, enforceability, and the commercial value of authorised deployment.", "creator_interest_components": ["Ordinary deployment value", "Creator labour, compute and compliance investment", "Lost bargaining opportunity", "Investigation, containment, remediation and enforcement burden", "Scale, duration, benefit, knowledge and recurrence"], "valuation_method": "Supported authorised-use value plus evidence-backed creator investment, response, remediation and enforcement components, adjusted for causation, legitimate interests, proportionality and duplicate recovery.", "evidence_basis": ["Comparable licences and pricing method", "Creator investment register", "Use, benefit and impact evidence", "Response and enforcement records"], "proportionality_analysis": "The amount protects interests extending beyond immediate out-of-pocket loss but must not be exorbitant or out of proportion under the governing law.", "amount_or_range": "[Counsel-approved amount or range after evidence-based valuation — replace]", "causal_link": "Include only components connected to the defined event or protected legitimate interests to the extent required by law.", "cap": "[Evidence-based cap — replace]", "duplication_group": "same-loss-and-benefit", "becomes_payable_when": "The accepted contract, settlement, judgment, or applicable law makes the reviewed amount due.", "review_and_dispute": "Notice, evidence, response, independent human review, correction, and competent dispute forum.", "legal_review": false},
+      {"id": "deployment-account-of-profits", "basis": "account_of_profits", "formation_stage": "none_statutory", "requires_assent": false, "remedy_character": "restitutionary", "trigger": "Proven use outside the copyright grant or other conduct supporting gain-based relief.", "legitimate_interest": "Prevent a licensee or non-licensee retaining attributable gains from unauthorised exploitation.", "creator_interest_components": ["Attributable revenue and profit", "Avoided development and licence cost", "Commercial advantage"], "valuation_method": "Disclosure, audit, accounting, apportionment and avoided-cost evidence under applicable law.", "evidence_basis": ["Accounts and transaction records", "Deployment and user records", "Causal and apportionment evidence"], "proportionality_analysis": "Limit the claim to recoverable attributable gain and credit overlapping recovery where required.", "amount_or_range": "Attributable profit or gain determined by settlement or competent order.", "causal_link": "Benefit must be attributable under the governing test.", "cap": "Recoverable attributable gain and any legal limit.", "duplication_group": "same-loss-and-benefit", "becomes_payable_when": "A settlement, judgment, order, or other legally sufficient event makes the amount due.", "review_and_dispute": "Competent disclosure, accounting, human review, and adjudication.", "legal_review": false},
+      {"id": "deployment-enforcement-costs", "basis": "enforcement_costs", "formation_stage": "pre_event_contract", "requires_assent": true, "remedy_character": "cost_recovery", "trigger": "A defined breach causes reasonable protection, investigation, preservation, professional, enforcement, funding, collection, or remediation expenditure.", "legitimate_interest": "Prevent the wrongdoer externalising the supported cost of making the creator's and affected persons' rights effective.", "creator_interest_components": ["Creator time", "Technical investigation", "Evidence preservation", "Legal and expert services", "Funding, collection and remediation costs"], "valuation_method": "Actual reasonable expenditure and evidenced creator time, subject to the accepted allocation rule and governing law.", "evidence_basis": ["Time and cost ledger", "Invoices and retainers", "Necessity and reasonableness records"], "proportionality_analysis": "Recover only supported, reasonable and legally recoverable costs, with review of caps and professional rules.", "amount_or_range": "Actual supported recoverable amount.", "causal_link": "The defined breach must have caused or reasonably required the expenditure under the governing rule.", "cap": "Applicable contractual, statutory, court-controlled, reasonableness, and professional-rule limits.", "duplication_group": "enforcement-costs", "becomes_payable_when": "The accepted contract, settlement, judgment, costs order, or applicable law makes the amount due.", "review_and_dispute": "Itemised notice, access to supporting evidence, human review, and agreed or competent dispute forum.", "legal_review": false}
+    ],
+    "enforcement_funding": {"enabled": true, "mechanisms": ["creator_reserve", "conditional_fee", "litigation_funding", "recovery_contingent_enforcement_reward", "rights_management_agent", "collective_enforcement"], "separate_agreement_required": true, "creator_control_preserved": true, "professional_rules_review": false, "allocation": "Separate reviewed agreements may allocate an agreed part of actual recoveries to counsel, funders, investigators, rights-management agents, or verified referral sources so enforcement is practically available.", "safeguards": ["Creator retains informed control subject to professional duties and court supervision", "No reward for accusation alone and no misrepresentation of disputed liability", "All fees, uplift, commission, priorities, adverse-cost exposure and termination rights are transparent", "Conflicts, privilege, confidentiality, funder influence and settlement authority are controlled"], "legal_review": false},
+    "recovery_waterfall": ["Urgent protection and restoration for affected natural persons, including the creator", "Creator/rightsholder restitution for lost use value, proven loss, impaired investment, diverted opportunity, and attributable gain", "Reasonable protective, investigative, legal, enforcement, funding, collection, and remediation costs", "Directly connected contributor obligations", "Creator-controlled enforcement and continuity reserve", "Other adopted humanitarian project purposes after the preceding interests are satisfied"]
+  },
+  "sources": [
+    {"id": "webcivics-jural", "title": "Web Civics Hohfeldian Jural Relations", "uri": "https://ns.webcivics.net/jural/", "source_type": "ontology", "binding_status": "Curated semantic vocabulary; not itself governing law.", "version": "Catalog snapshot 2026-07-24", "mapping_status": "human_attested"},
+    {"id": "icescr-article-15", "title": "International Covenant on Economic, Social and Cultural Rights — article 15", "uri": "https://2covenants.ohchr.org/About-ICESCR.html", "source_type": "treaty", "binding_status": "Human-rights treaty obligation of States Parties; private-law route and domestic effect require jurisdiction-specific analysis.", "version": "Official OHCHR text checked 2026-08-04", "mapping_status": "summarised"},
+    {"id": "cescr-general-comment-17", "title": "CESCR General Comment No. 17 — authors' moral and material interests", "uri": "https://tbinternet.ohchr.org/_layouts/15/treatybodyexternal/TBSearch.aspx?SymbolNo=E%2FC.12%2FGC%2F17", "source_type": "general_comment", "binding_status": "Authoritative treaty-body interpretation; not by itself a private damages tariff or contract.", "version": "E/C.12/GC/17 (2005)", "mapping_status": "summarised"},
+    {"id": "webcivics-agency", "title": "Web Civics Agency and Accountability", "uri": "https://ns.webcivics.net/agency/", "source_type": "ontology", "binding_status": "Curated semantic vocabulary and proposed rules; not adjudicated law.", "version": "Catalog snapshot 2026-07-24", "mapping_status": "human_attested"},
+    {"id": "oecd-privacy", "title": "OECD Privacy Guidelines", "uri": "https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0188", "source_type": "recommendation", "binding_status": "OECD Council Recommendation; private contractual effect requires a valid incorporation route.", "version": "Current Compendium entry to be checked at adoption", "mapping_status": "summarised"},
+    {"id": "oecd-data-access", "title": "OECD Recommendation on Enhancing Access to and Sharing of Data", "uri": "https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0463", "source_type": "recommendation", "binding_status": "OECD Council Recommendation; not itself a private contract.", "version": "Current Compendium entry to be checked at adoption", "mapping_status": "summarised"},
+    {"id": "oecd-government-access", "title": "OECD Declaration on Government Access to Personal Data Held by Private Sector Entities", "uri": "https://legalinstruments.oecd.org/en/instruments/OECD-LEGAL-0487", "source_type": "declaration", "binding_status": "OECD Declaration; applicable domestic law and safeguards require separate analysis.", "version": "Current Compendium entry to be checked at adoption", "mapping_status": "summarised"}
+  ]
+}
