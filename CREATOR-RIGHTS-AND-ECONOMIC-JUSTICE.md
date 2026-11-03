@@ -1,12 +1,13 @@
 # Creator Rights and Economic Justice
 
 Status: implementation foundation for legal and humanitarian review  
-Version: 0.2-draft  
-Date: 4 August 2026
+Version: 0.3-draft
+
+Date: 3 November 2026
 
 ## 1. Position
 
-A natural-person creator is not raw material for a humanitarian project, an AI provider, a commercial user, a government, a well-funded litigant, or the public. The creator is an affected person with dignity, agency, livelihood, property, labour, reputation, moral interests, material interests, and a need for effective remedy.
+A human creator is not raw material for a humanitarian project, an AI provider, a commercial user, a government, a well-funded litigant, or the public. The creator is an affected human with dignity, agency, livelihood, property, labour, reputation, moral interests, material interests, and a need for effective remedy. Human welfare includes sustainable participation, rest, care responsibilities and an ability to stop contributing under clear terms; a public-benefit purpose does not create an unlimited claim on a human's time or resources.
 
 The framework rejects the proposition that disclosure, inspectability, technical access, altruistic purpose, or inability to fund immediate litigation makes a creator's work available for exploitation. It also rejects the proposition that procedural safeguards for an accused actor require the creator to absorb every production and enforcement cost.
 
@@ -47,6 +48,24 @@ Every profile must record relevant creator investment rather than treating the W
 - investigation, evidence preservation, expert, legal, funding, collection, remediation, and continuity costs.
 
 Expenditure does not by itself prove copyright in every AI output. The profile separately preserves human planning, prompts, source materials, selections, corrections, integration, testing, editorial judgment, and final authorship decisions; identifies machine outputs; records applicable provider terms; and preserves confidentiality and third-party provenance. This evidence supports accurate title, authorship, pricing, loss, contribution, and dispute analysis.
+
+Investment evidence, valuation and an obligation to pay are distinct. The [contribution lifecycle](CONTRIBUTION-LIFECYCLE.md) develops the proposed records for requested and unsolicited work, acceptance, claims, review, shared costs, dependencies, settlement and later maintenance. It includes review, translation, coordination, accessibility and integration work, as well as code or other identifiable outputs. Recording sacrifice or resource use is relevant to assessment but does not, by itself, create a debt or a universal compensation formula.
+
+Human work, software activity and provider services must remain distinguishable. Tool provenance can support accountability without assigning human authorship to a software agent or requiring a promotional byline. Provider charges, human compensation, rights in outputs and permission to process information about humans require separate treatment. A paid invoice does not establish all four.
+
+## 4.1 Compensation and benefit without substitution
+
+Agreed monetary obligations must remain visible until satisfied under their terms. Recognition, learning, community access, service exchange or ecological and social outcomes can be valuable, but do not silently replace money owed. Distinguish a unit of account, payment mechanism, financial instrument, non-monetary benefit and impact measurement. A purported substitution requires a valid, informed agreement and review of applicable requirements; inherent human rights and human worth are not exchangeable benefits.
+
+Amounts allocated to shared expenses must reconcile to the original cost. Attribution to upstream work, compliance with its actual licence, voluntary support and an accepted funding obligation are separate relationships. Later maintenance can carry new agreed obligations for identified versions, while settled costs remain settled and earlier valid grants continue under their terms. A compensation-based transition requires full satisfaction of its defined agreed obligations and an authorised licence decision; it does not follow automatically from a payment, funding forecast or percentage threshold.
+
+Project funding and beneficiary compensation must also remain separate. A pool can hold sufficient funds while contributors remain unpaid. Record a funder's discharged deposit obligation separately from the project's outstanding payout obligations, including intermediary custody, fees and reversals. Payment of software or provider charges does not establish payment for the human's work.
+
+## 4.2 Fair review and sustainable participation
+
+Contributors should receive understandable terms before requested work and reasoned, reviewable decisions afterwards. Rejection of an output cannot be used to erase amounts due for authorised work or expenses. Review procedures need practical timelines, accessible support, conflict management, correction and appeal, with private evidence protected. Unsolicited work does not create an automatic debt merely because it is useful.
+
+The [fairness and rights review](FAIRNESS-AND-RIGHTS-REVIEW.md) should examine costs borne by contributors and affected humans, including device access, connectivity, energy, time, care and the cost of challenging a decision. An impact measure is not automatically a charge. Sustainable funding must support human agency and welfare rather than convert participation into indefinite unpaid availability or make access to remedy depend on a reputation score.
 
 ## 5. Exploitation and permission boundaries
 

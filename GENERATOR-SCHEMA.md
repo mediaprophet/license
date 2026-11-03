@@ -2,9 +2,11 @@
 
 Status: implemented specification  
 Version: 0.1-draft  
-Date: 4 August 2026
+Documentation updated: 3 November 2026; executable schema unchanged in this content revision.
 
 This document defines the implementation contract for the humanitarian licence generator. The normative JSON Schema is `schemas/license-profile.schema.json`; the dependency-free implementation is `src/license_generator.py`; and usage is documented in `GENERATOR.md`. Validation and generation do not approve legal terms.
+
+The content-development specifications for [contributions](CONTRIBUTION-LIFECYCLE.md), [assertions](CONTEXTUAL-ASSERTIONS.md), [fairness review](FAIRNESS-AND-RIGHTS-REVIEW.md) and [QualiaDB integration](QUALIADB-IMPLEMENTATION-ROADMAP.md) describe subsequent work. Their proposed records are not part of this schema version. Current validation checks supplied profile data; it does not independently establish the truth of evidence, legal validity, payment settlement or runtime compliance. Requirements expressed as review gates need the identified reviewers and supporting systems as well as automated validation.
 
 ## 1. Design rule
 

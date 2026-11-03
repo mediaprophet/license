@@ -72,6 +72,10 @@ An obligation record should identify the contributor, contribution and provenanc
 
 Cooperative governance should make allocation, approval, payment priorities, and the treatment of shared costs understandable to participants. Contributors should be able to see what has been accepted, what remains outstanding, and how decisions can be challenged. Private financial and identity information needs protection even where attribution and release decisions are public.
 
+The [contribution lifecycle](CONTRIBUTION-LIFECYCLE.md) develops these requirements into distinct records for agreements, activities, outputs, acceptance, valuation, obligations, settlement and release decisions. A requested activity may have accrued payment rights even when its output is not integrated. An unsolicited submission does not automatically create a debt. Review should give reasons, allow correction and appeal, and identify conflicts of interest. Recognition, credentials or public benefit cannot silently replace agreed monetary compensation.
+
+Accepted work can include translation, accessibility, review, care for project processes, coordination and maintenance as well as code. Sustainable participation includes rest, care responsibilities, accessible participation and the ability to stop contributing subject to identified commitments and applicable rights. Neither contribution volume nor payment capacity determines a human's inherent rights or standing to raise concerns about a system affecting them.
+
 ## Licence transitions after obligations are met
 
 The intended lifecycle is:
@@ -92,6 +96,8 @@ The concern described here as “digital slavery” is the extraction of people'
 
 The intended response combines informed participation, transparent obligations, attribution, privacy, accountable governance, and effective routes to correction and remedy. Voluntary contributions should remain distinguishable from contributions carrying an agreed expectation of payment. Meeting financial obligations must not be treated as purchasing permission to disregard dignity, privacy, personhood, or other applicable rights.
 
+Informational exploitation also matters: identification, coercive influence, manipulation and appropriation of human characteristics can impair agency independently of unpaid labour. The [fairness and rights review](FAIRNESS-AND-RIGHTS-REVIEW.md) considers those effects alongside economic, social, ecological and practical remedy burdens. [Contextual assertions](CONTEXTUAL-ASSERTIONS.md) separates observations, inferences, allegations, attestations and adjudicated findings, with bounded use, evidence, review and correction. A cryptographic signature does not make an assertion true or authorise every use of it.
+
 ## Software being developed
 
 The current repository contains a working profile validator and document generator, draft legal and governance instruments, and a provisional rights ontology. These provide part of the foundation for the broader system. They do not yet establish an operational contribution accounting, payment settlement, or automatic relicensing service.
@@ -107,6 +113,14 @@ The intended supporting systems need to connect:
 - release checks, transition decisions, and versioned licence notices that other projects can verify.
 
 The [licensing framework](LICENSING-FRAMEWORK.md) describes a proposed incubation and release pathway. Its public inspection restrictions apply only where expressly adopted; they are not a description of the Creative Commons permissions in other ecosystem projects. The [generator documentation](GENERATOR.md) describes current functionality. [Contributor terms](CONTRIBUTOR-TERMS-DRAFT.md), the [rights register](RIGHTS-REGISTER.md), and [humanitarian foundations](HUMANITARIAN-FOUNDATIONS.md) develop the supporting agreements, records, and principles.
+
+## QualiaDB and the next implementation phase
+
+This project relates to [QualiaDB](https://github.com/mediaprophet/qualiaDB), including its logic systems, Context Markup Language (CML), and semantic instruments. The next phase is intended to use those tools to help implement and evaluate first drafts of the licensing and rights-management systems. The [implementation roadmap](QUALIADB-IMPLEMENTATION-ROADMAP.md) pins the inspected sources and distinguishes documented capabilities, demonstration implementations, proposed integration and acceptance requirements.
+
+The intended connection is practical: preserve context and provenance, express bounded rights and duties, identify missing or conflicting authority, and produce reviewable reasoning and draft artifacts. It must preserve the distinction between technical inference and a legally authorised decision. Neither a successful proof nor a semantic instrument should turn an unaccepted claim into debt, settle disputed facts, expand an identifier permission, or grant a new licence without the required authority and decision records.
+
+The [source adoption record](HUMANITARIAN-EQUITY-SOURCE-MANIFEST.md) explains how the earlier Humanitarian Equity Framework informs this work. The [project plan](PROJECT-PLAN.md) records the content revision and its review. These documents and the supporting tools remain subject to the development and drafting notice above.
 
 ## Reference text for related projects
 

@@ -1,12 +1,16 @@
 # Humanitarian Foundations for the Licensing Framework
 
-Status: working outline for legal, humanitarian, and technical review  
-Version: 0.1-draft  
-Date: 4 August 2026
+Status: working outline for legal, humanitarian, and technical review
+
+Version: 0.2-draft
+
+Updated: 3 November 2026
 
 This document defines the normative and semantic underpinnings of the Humanitarian Equity Licensing Framework. It is deliberately prior to licence drafting and generator implementation: generated clauses must be consequences of an explicit model, not a collection of attractive phrases.
 
 This is not itself a licence and does not make a legal conclusion about any person, organisation, jurisdiction, or use. International instruments do not necessarily bind private parties directly. Where appropriate, a licence may incorporate selected undertakings contractually, but must accurately distinguish applicable law, binding treaty obligations, soft-law principles, project policy, and contractual promises.
+
+The requirements below describe the intended framework, including capabilities still to be implemented. Statements that a generator should or must perform a check are design requirements unless the [generator documentation](GENERATOR.md) identifies that check as implemented. The [fairness review](FAIRNESS-AND-RIGHTS-REVIEW.md), [contextual assertion model](CONTEXTUAL-ASSERTIONS.md) and [contribution lifecycle](CONTRIBUTION-LIFECYCLE.md) develop these requirements into reviewable records and cases for the [QualiaDB implementation phase](QUALIADB-IMPLEMENTATION-ROADMAP.md).
 
 ## 1. Purpose
 
@@ -82,7 +86,7 @@ It must not imply that citing a declaration automatically creates a universally 
 
 ## 4. Foundational principles
 
-### 4.1 Natural-person dignity is the root
+### 4.1 Human dignity is the root
 
 Human life and dignity are not merely emotional interests, preferences, economic variables, or platform metrics. The framework begins with the living natural person and their material conditions of existence.
 
@@ -184,6 +188,10 @@ The contribution and compensation model should therefore ensure:
 
 The Web Civics Permissive Commons graph leaves an important design choice open: collective-pool discharge versus per-agent debt. The generator must expose that choice and its consequences; it must not silently select one.
 
+Human welfare also requires room for rest, sleep, recreation, health and care. [UDHR article 24](https://www.un.org/en/about-us/universal-declaration-of-human-rights/) recognises rest and leisure, including reasonable working-hour limits. This informs project design alongside applicable law; it does not supply a universal eight-hour payment trigger or justify monitoring a human's entire life. Agree expected effort and availability, support accessible and asynchronous participation, and allow humans to stop taking on future contributions without erasing previously accrued obligations or valid surviving duties.
+
+The [contribution lifecycle](CONTRIBUTION-LIFECYCLE.md) separates a request, activity, output, acceptance, valuation, obligation and settlement. Recognition, access, badges and wider social benefit must not silently replace an agreed monetary payment. Review, integration, translation, accessibility and coordination can be useful contributions even where they do not produce a standalone code artifact.
+
 ### 4.7 Participation, development, and benefit sharing
 
 People affected by a system should not be treated merely as data sources, test subjects, beneficiaries chosen by others, or risks to be managed. Drawing on the right-to-development and scientific-progress instruments, the framework should support:
@@ -197,6 +205,8 @@ People affected by a system should not be treated merely as data sources, test s
 - special protection without paternalistic removal of agency.
 
 Participation is not satisfied by publication alone. The process must provide intelligible notice, an effective channel, adequate time, and evidence that input can affect the decision.
+
+WellFair review should make resource and ecological burdens visible: device and connectivity requirements, human time, energy, hosting, maintenance and equipment disposal where material. Record who bears each cost, whether it is measured or estimated, and feasible alternatives. An impact measure is not itself a payable obligation; neither a computation threshold nor a claimed public benefit creates or discharges a debt. The [fairness review specification](FAIRNESS-AND-RIGHTS-REVIEW.md) connects these considerations to participation, remedy and release decisions.
 
 ### 4.8 Accountability follows the actor chain
 
@@ -213,6 +223,8 @@ For each permission or use, the framework should be able to identify:
 - the forum capable of providing an effective remedy.
 
 Claims made by software agents are claims, not proof. Generated compliance declarations, completion claims, safety classifications, tests, and valuations require independent provenance and a recorded result.
+
+Assertions about humans must remain contextual and contestable. Separate observations, inferences, allegations, attestations and adjudicated findings; record the issuer, actual principal, evidence, permitted use, uncertainty and lifecycle. A signature authenticates a statement within its technical limits, not its truth or the right to repurpose it. The [contextual assertion specification](CONTEXTUAL-ASSERTIONS.md) requires correction and challenge pathways and rejects general reputation scores as substitutes for relevant evidence and human review.
 
 ### 4.9 Effective remedy and procedural fairness
 

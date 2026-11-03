@@ -15,7 +15,7 @@ The intended human centric ecosystem also requires a rights fabric for principal
 
 ## Validate a profile
 
-From `C:\github\license`:
+From the repository root:
 
 ```powershell
 .\license-generator.cmd validate .\examples\public-inspection-profile.json
@@ -97,6 +97,10 @@ python -m unittest discover -s tests -v
 The tests cover valid examples, creator autonomy and investment, AI-use boundaries, creator-held relations, recovery priority, deterrent classification, post-event settlements, funding safeguards, reference integrity, contract formation, non-assenter debt, artificial-agent accountability, automated adjudication, ledger privacy, adoption gates, safe output handling, and generated manifest hashes.
 
 ## Adoption workflow
+
+The [contribution lifecycle](CONTRIBUTION-LIFECYCLE.md), [contextual assertions](CONTEXTUAL-ASSERTIONS.md) and [fairness and rights review](FAIRNESS-AND-RIGHTS-REVIEW.md) are design specifications for the next phase. Their proposed records and examples are not new fields in `schemas/license-profile.schema.json`. Keep supplementary review records outside generator profiles until a versioned schema, adapter and validation tests explicitly support them. In particular, the existing creator-investment schedule is not a verified payable-obligation or settlement register.
+
+The [QualiaDB implementation roadmap](QUALIADB-IMPLEMENTATION-ROADMAP.md) defines the staged handoff to CML, logic systems and semantic instruments. A future adapter must preserve source versions, authority, privacy restrictions and human-review status through generation. No QualiaDB runtime is currently invoked by this generator.
 
 1. Copy an example to a project-specific profile.
 2. Replace every bracketed or example value and use the actual release hash.

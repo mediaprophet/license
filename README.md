@@ -22,6 +22,19 @@ The public inspection licence and other instruments in this repository are propo
 
 Nothing in this repository applies to another project or replaces an existing licence unless the authorised rights holder formally adopts identified, reviewed artifacts for an identified release. Generated documents are drafts unless their approval and adoption records establish otherwise.
 
+## Content development and next implementation phase
+
+The current content revision develops the useful proposals from the earlier Humanitarian Equity Framework into reviewable specifications. The [source adoption record](HUMANITARIAN-EQUITY-SOURCE-MANIFEST.md) explains what is retained, revised or superseded. The [project plan](PROJECT-PLAN.md) records scope and delivery, and the [review record](CONTENT-REVIEW.md) records findings, verification and remaining work.
+
+| Start here when you need to… | Reference |
+| --- | --- |
+| Record work, resources, acceptance, valuation, obligations and settlement | [Contribution lifecycle](CONTRIBUTION-LIFECYCLE.md) |
+| Review human welfare, fairness, resource burdens and practical remedy | [Fairness and rights review](FAIRNESS-AND-RIGHTS-REVIEW.md) |
+| Handle evidence, inferences, credentials, allegations and challenges | [Contextual assertions](CONTEXTUAL-ASSERTIONS.md) |
+| Prepare implementation with QualiaDB, CML and semantic instruments | [QualiaDB implementation roadmap](QUALIADB-IMPLEMENTATION-ROADMAP.md) |
+
+These specifications prepare the next phase. They are not additional input fields accepted by the existing generator and do not establish a working payment or rights-enforcement service. The roadmap identifies source versions, candidate integration points and the checks required before semantic tools can support reviewed first drafts.
+
 ## Working generator
 
 The dependency-free Python generator validates a JSON profile and assembles a coordinated artifact bundle.

@@ -1,8 +1,9 @@
 # Contract and Intellectual-Property Architecture
 
 Status: working design for legal and product review  
-Version: 0.1-draft  
-Date: 4 August 2026
+Version: 0.2-draft
+
+Updated: 3 November 2026
 
 This document defines how a generated instrument should combine copyright permission with a contract. It is not legal advice and is not an operative agreement.
 
@@ -162,7 +163,15 @@ The generator must halt for legal review when:
 - a one-sided standard-form term may be unfair or a remedy may be penal; or
 - the system cannot distinguish a contract claim, copyright claim, settlement offer, and adjudicated debt.
 
-## 10. Primary references
+## 10. Optional standards and interoperability permission
+
+A project may propose a separate permission for a defined standards contribution or interoperability activity. It must identify the exact material and version, permitted acts, purpose, recipients and any agency capacity, duration, publication and redistribution terms, attribution, incorporated material, applicable standards-body process and approval evidence. Determine separately whether any patent commitment is intended and whether the rights holder can make it. A copyright permission must not be presented as patent clearance.
+
+No standards exemption is active merely because this document describes the option. Membership of, contribution to, or implementation of a standard associated with W3C, IETF, IEEE or another body is not treated here as a general permission to use the Work. The historical framework's broad standards exemption is replaced with this requirement for a bounded, reviewed instrument. Mandatory legal exceptions and earlier valid grants remain independently applicable.
+
+An implementation profile would need an approved adapter or schema extension for this option; the current generator does not expose a dedicated standards-permission workflow. The [source adoption record](HUMANITARIAN-EQUITY-SOURCE-MANIFEST.md) records the lineage, and the [QualiaDB roadmap](QUALIADB-IMPLEMENTATION-ROADMAP.md) describes later semantic implementation.
+
+## 11. Primary references
 
 - [Copyright Act 1968 (Cth), ss 36 and 115](https://www.legislation.gov.au/C1968A00063/latest/text)
 - [ACCC — Contracts](https://www.accc.gov.au/business/selling-products-and-services/contracts)

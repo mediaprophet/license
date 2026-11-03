@@ -1,8 +1,10 @@
 # Rights Ontology and Applied Instruments
 
-Status: implementation specification  
-Version: 0.1-draft  
-Date: 4 August 2026
+Status: implementation specification; broader integration requirements remain in development
+
+Version: 0.2-draft
+
+Updated: 3 November 2026
 
 This specification makes the rights ontology the semantic centre of the licensing framework. “Data sharing” is treated as an event. The ontology represents the normative relations governing that event and every other relevant act.
 
@@ -216,3 +218,23 @@ The generator compiles one reviewed profile into:
 8. a hash manifest and source-to-output report.
 
 The ontology is the design source of truth. The adopted legal text governs the parties according to applicable law; executable policy must never silently override it.
+
+## 11. Contextual assertions, compensation and review
+
+The rights fabric needs to distinguish an observation, inference, allegation, attestation and competent decision. Each has an issuer, context, evidence, permitted audience, validity and challenge history; a signed claim is not thereby true. The [contextual assertion specification](CONTEXTUAL-ASSERTIONS.md) develops these requirements without reducing humans to global reputation scores or treating inferred mindware as the human's own account.
+
+The [contribution lifecycle](CONTRIBUTION-LIFECYCLE.md) separates recorded work and resources from acceptance, valuation, payable obligations, settlement, payout and licensing authority. Each relation can be connected to a legal or governance instrument, but its graph representation does not create the underlying debt or grant. Dependency attribution, historical cost allocation and ongoing maintenance must preserve version and obligation lineage rather than charge recovered costs again.
+
+The [fairness and rights review](FAIRNESS-AND-RIGHTS-REVIEW.md) supplies a contextual review procedure for proposed clauses, processing acts and decisions. Its findings remain distinct from enforceable rights and from computational shape validation. A missing review, uncertain authority or contested material fact must be visible to downstream decisions rather than treated as a favourable default.
+
+These records extend the intended semantic model. They are not additional fields already supported by the current profile schema or generator. Schema changes, migration rules and substantive validation require a separately tested implementation.
+
+## 12. QualiaDB, CML and semantic instruments
+
+The next implementation phase will use QualiaDB's logic systems and semantic tooling to develop the first instruments from these drafts. The [QualiaDB implementation roadmap](QUALIADB-IMPLEMENTATION-ROADMAP.md) records a pinned source review, candidate mappings, staged deliverables and acceptance cases.
+
+CML, **Context Markup Language**, connects original source passages to contextual concepts and selected logic. The intended integration preserves that chain, separates automated proposals from authoritative human review, and retains contradictions and uncertainty. The ontology framing must also be audited against QualiaDB's distinction between descriptions of living humans and constructed artifacts; compatibility is not established by shared vocabulary names.
+
+A semantic instrument packages a specific, versioned method with its dependencies, constraints, evidence and execution contract. It is distinct from a legal instrument, a credential, its visible icon and any result it produces. An execution receipt proves neither legal correctness nor an entitlement to act on the result. Inspection, acquisition, installation, execution permission and legal authority remain separate decisions.
+
+The upstream tooling is in active development. In particular, the inspected generic instrument runner is a labelled identity-transform demonstration, while broader logic evaluators are separate surfaces. The roadmap requires a real, tested connection before claiming that a licensing rule has executed. No current profile, package or receipt is sufficient by itself to establish compensation, adjudicate rights, authorise processing of human biometrics or mindware, or change a licence.
