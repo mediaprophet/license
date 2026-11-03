@@ -1,11 +1,13 @@
 # Humanitarian Equity Licensing Framework
 
-Status: working draft for legal review  
+Status: pre-operational framework; constituent ecosystem development and adoption review pending
 Version: 0.3-draft
 
 Updated: 3 November 2026
 
 This document develops a proposed incubation and release pathway within the broader framework for cooperative licensing, digital rights, contributor compensation, and humanitarian ICT. [Project purpose and ecosystem licensing transitions](PROJECT-PURPOSE.md) explains the shared direction and why other ecosystem projects currently use Creative Commons licences while the intended supporting software is developed.
+
+The temporary alternative licences reflect a dependency: the constituent ecosystem systems required to use this licensing and rights fabric are still being developed. Related QualiaDB, CML and semantic-instrument work informs the framework's terminology, intended operation and readiness description. Completion and validation of the required components for an identified use is a prerequisite to operational adoption. It is separate from satisfying a particular work's compensation obligations and authorising its licence transition; neither milestone substitutes for the other.
 
 The public inspection restrictions below describe a proposed licence option for expressly identified releases. They do not replace the Creative Commons or other licences already used by related projects, and they are not mandatory stages for every project using this framework.
 

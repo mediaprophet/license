@@ -1,10 +1,10 @@
 # Project purpose and ecosystem licensing transitions
 
-Status: project direction and development requirements
+Status: licensing and rights fabric in development; constituent ecosystem capabilities required before operational adoption
 
 Updated: 3 November 2026
 
-`license` develops a shared framework and supporting software for intellectual property licensing and digital rights management. Related ecosystem projects, particularly software projects, can refer here to explain why they currently use an interim licence and what the intended future licensing arrangements are meant to achieve.
+`license` develops a shared framework and supporting software for intellectual property licensing and a human centric rights fabric. Its intended use depends on constituent ecosystem capabilities that are still being developed, including related work in QualiaDB, logic systems and semantic tooling. Related projects, particularly software projects, currently use temporary alternative licences because the required framework and supporting systems are not yet ready for their intended use. This document explains that dependency, the interim approach and the arrangements being developed.
 
 The central purpose is to enable cooperative and collaborative production in which contributors' work and applied resources are recognised and fairly compensated. Once the agreed compensation and obligation fees associated with an identified work have been fully met, the intended system should support an authorised transition to different licensing terms for the resulting work or derivative.
 
@@ -58,7 +58,9 @@ Delivering these purposes requires advancement of the underlying rights models, 
 
 ## Why related projects currently use Creative Commons
 
-Other projects in the ecosystem currently employ Creative Commons licensing as an interim approach. The software capabilities needed to apply the intended licensing and rights management systems are still being developed; this repository contributes to that work through its framework, draft instruments, semantic models, and generator.
+Other projects in the ecosystem currently employ Creative Commons licensing as a temporary alternative while the constituent work needed to use the intended licensing and rights fabric is completed. This includes related semantic and logic tooling, rights and authority records, privacy and human-agency safeguards, contribution and settlement processes, and governance and review mechanisms. This repository contributes framework descriptions, draft instruments, semantic models and a prototype generator; their existence alone does not make the intended framework operational.
+
+Two readiness questions must remain distinct. First, are the framework and its required ecosystem components developed, integrated, reviewed and validated sufficiently for a project to adopt identified functions? Second, for a particular compensation-based licence transition, have the defined agreed obligations been fully met and the necessary licensing authority and release approval been established? The temporary alternative addresses the first dependency. Meeting a financial milestone does not complete missing infrastructure, and completing infrastructure does not settle contributor obligations or itself change a licence. Readiness is assessed for the defined use and its required components, rather than requiring every unrelated ecosystem project to be finished.
 
 The applicable Creative Commons variant, version, and covered material must be identified in each project's own licence notice. This explanation does not select a Creative Commons licence for this repository, introduce an additional fee into an existing grant, or activate any of the draft licences held here.
 
@@ -100,7 +102,7 @@ Informational exploitation also matters: identification, coercive influence, man
 
 ## Software being developed
 
-The current repository contains a working profile validator and document generator, draft legal and governance instruments, and a provisional rights ontology. These provide part of the foundation for the broader system. They do not yet establish an operational contribution accounting, payment settlement, or automatic relicensing service.
+The current repository contains a functioning prototype profile validator and document generator, draft legal and governance instruments, and a provisional rights ontology. Its project status is development of a licensing and rights fabric whose operational use depends on further constituent ecosystem work. A completed documentation revision or generated bundle is evidence of progress on those particular artifacts, not completion of the framework, its dependencies or an operational contribution, settlement or licence-transition service.
 
 The intended supporting systems need to connect:
 
@@ -114,9 +116,9 @@ The intended supporting systems need to connect:
 
 The [licensing framework](LICENSING-FRAMEWORK.md) describes a proposed incubation and release pathway. Its public inspection restrictions apply only where expressly adopted; they are not a description of the Creative Commons permissions in other ecosystem projects. The [generator documentation](GENERATOR.md) describes current functionality. [Contributor terms](CONTRIBUTOR-TERMS-DRAFT.md), the [rights register](RIGHTS-REGISTER.md), and [humanitarian foundations](HUMANITARIAN-FOUNDATIONS.md) develop the supporting agreements, records, and principles.
 
-## QualiaDB and the next implementation phase
+## Ecosystem prerequisites, including QualiaDB
 
-This project relates to [QualiaDB](https://github.com/mediaprophet/qualiaDB), including its logic systems, Context Markup Language (CML), and semantic instruments. The next phase is intended to use those tools to help implement and evaluate first drafts of the licensing and rights-management systems. The [implementation roadmap](QUALIADB-IMPLEMENTATION-ROADMAP.md) pins the inspected sources and distinguishes documented capabilities, demonstration implementations, proposed integration and acceptance requirements.
+Related work in [QualiaDB](https://github.com/mediaprophet/qualiaDB), including its logic systems, Context Markup Language (CML), and semantic instruments, informs the terminology, descriptions and development status of this licensing and rights fabric. These capabilities form part of the constituent work needed to express, interpret and apply the intended arrangements. Their development and integration reinforce why related projects currently use temporary alternative licences. The next phase is intended to use those tools to support first implementations and evaluation; the [implementation roadmap](QUALIADB-IMPLEMENTATION-ROADMAP.md) records supporting evidence and requirements for that dependency.
 
 The intended connection is practical: preserve context and provenance, express bounded rights and duties, identify missing or conflicting authority, and produce reviewable reasoning and draft artifacts. It must preserve the distinction between technical inference and a legally authorised decision. Neither a successful proof nor a semantic instrument should turn an unaccepted claim into debt, settle disputed facts, expand an identifier permission, or grant a new licence without the required authority and decision records.
 
@@ -126,4 +128,4 @@ The [source adoption record](HUMANITARIAN-EQUITY-SOURCE-MANIFEST.md) explains ho
 
 The following text can accompany a project's actual licence notice:
 
-> This project currently uses the Creative Commons licence identified in its licence notice as an interim approach while the supporting licensing and rights management systems are developed. The [license project](https://github.com/mediaprophet/license) develops a framework for cooperative and collaborative work, humanitarian ICT, contributor compensation, and accountable licence transitions. The intended model records contributions and applied resources, verifies when agreed compensation and obligations have been fully met, and supports an authorised change of licence for an identified resulting work or derivative. See [Project purpose and ecosystem licensing transitions](https://github.com/mediaprophet/license/blob/main/PROJECT-PURPOSE.md) for the rationale and development goals. The licence actually attached to this release governs its use; this statement of intent does not amend it.
+> This project currently uses the Creative Commons licence identified in its licence notice as a temporary alternative while the constituent ecosystem work needed to use the intended licensing and rights fabric is completed. The [license project](https://github.com/mediaprophet/license) develops that framework for cooperative and collaborative work, humanitarian ICT, contributor compensation and accountable licence transitions. Its intended operation depends on related semantic and logic tooling, rights safeguards, contribution and settlement systems, and governance processes that remain in development. Once the required capabilities are ready, adoption will require an authorised decision for identified material; any compensation-based licence transition will also require full satisfaction of its defined agreed obligations. See [Project purpose and ecosystem licensing transitions](https://github.com/mediaprophet/license/blob/main/PROJECT-PURPOSE.md) for the rationale and development status. The licence actually attached to this release governs its use; this statement of intent does not amend it.

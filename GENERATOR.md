@@ -1,6 +1,8 @@
 # Licence Generator
 
-The repository includes a working, dependency-free Python validator and document assembler. It compiles a creator- and rights-ontology profile into coordinated legal, creator-investment, semantic, information-governance, technical-instrument, deterrence, recovery, and enforcement-funding drafts.
+The repository includes a functioning prototype, dependency-free Python validator and document assembler. It compiles a creator- and rights-ontology profile into coordinated legal, creator-investment, semantic, information-governance, technical-instrument, deterrence, recovery, and enforcement-funding drafts.
+
+This limited implementation does not make the licensing and rights fabric operational. Its intended use depends on further constituent ecosystem development, integration and validation, including related semantic tooling and the required authority, privacy, contribution, settlement and governance functions. That dependency underlies the temporary alternative licences used by related projects, as explained in [Project purpose](PROJECT-PURPOSE.md).
 
 It does **not** decide legal liability, issue demands, calculate a debt, scrape suspected users, select counsel, or initiate enforcement.
 

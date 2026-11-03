@@ -1,6 +1,6 @@
 # Humanitarian equity content renewal plan
 
-Status: content implementation, independent review and validation complete; delivered on the update branch
+Status: documentation work package completed and reviewed; licensing and rights fabric and required ecosystem components remain in development
 
 Baseline: `ff97c25409d2f43097aeb3aa7f8fe14198649dde`, preserved on `codex/archive-before-equity-update-2026-11-03`.
 
