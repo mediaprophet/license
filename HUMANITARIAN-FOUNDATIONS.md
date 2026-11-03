@@ -92,7 +92,15 @@ A corporation, government body, association, or artificial agent may hold legal 
 
 ### 4.2 Human agency and self-determination
 
-People should be able to understand, choose, refuse, condition, and end their participation. A valid permission or undertaking requires attention to:
+For the human centric ecosystem, the individual human is the **principal** in relation to their own human agency and rights, distinct from other agents. Those agents may act for other humans, corporations, governments, or other entities and legal persons, rather than for the affected human. Their actual principals, authority, permitted uses, limitations, and consequences of misuse must be identified through applicable law and valid legal instruments. Legal personality is not equivalent to being human. A third party must not own or control the principal human's characteristics or properties in a manner that invalidates their human rights. Agency, delegation, guardianship, and technical custody must preserve this boundary.
+
+Enabling humans to own their own biometrics is an instrumental project objective. The project's broader use of **biometrics** includes **mindware**: the objective and subjective foundations and formations through which a human experiences and understands reality, develops meaning, forms intentions, and exercises agency, including human-rights qualities and qualia. Observations and inferred representations of those characteristics are not the human or their lived experience. This usage does not presume that all such characteristics are measurable or fall within a single legal category of biometric data.
+
+The [project purpose](PROJECT-PURPOSE.md) connects this objective to a **rights fabric** governing information acts and relationships, and to **WellFair**, meaning welfare and fairness. Information can be copied, combined, and used to derive further claims without transferring a physical object or extinguishing the principal human's rights. Human rights protections must therefore inform collection, inference, onward use, and remedy, rather than depend solely on possession or ownership of a record.
+
+The rights fabric must determine whether an agent has a right to act, identify, influence, interfere, profile, manipulate, or otherwise affect a human, not merely whether it can represent them. A human with stewardship over their identifiers may grant use of specified computational representations for specified purposes and terms, but that grant authorises no other use. Knowing an agent's principal or permitting a limited interaction does not establish a general right to act upon the human, their biometrics, or mindware. Each additional act needs its own applicable basis and remains subject to human rights protections and legally grounded consequences of misuse.
+
+Humans should be able to understand, choose, refuse, condition, and end their participation. A valid permission or undertaking requires attention to:
 
 - identity of the parties and any principal or representative;
 - legal and practical capacity;
@@ -104,6 +112,8 @@ People should be able to understand, choose, refuse, condition, and end their pa
 - consequences of refusal or exit.
 
 Consent does not legitimate what law forbids, extinguish non-waivable rights, or erase the interests of affected third parties. Nor is consent the only possible legal basis. The generator must identify the actual basis instead of using “consent” as a universal solvent.
+
+Guardianship and support relationships require particular attention to the principal human's continuing rights, accessible participation, the source and limits of representative authority, conflicts of interest, review, and changing circumstances. Assistance with a decision is distinct from authority to decide on another human's behalf. Neither relationship transfers ownership of the human, their biometrics, or their mindware to an agent. The international foundations include children's best interests, evolving capacities, participation, and privacy under [CRC articles 3, 5, 12, and 16](https://www.unicef.org/child-rights-convention/convention-text), and support for exercising legal capacity with safeguards respecting rights, will, and preferences under [CRPD article 12](https://www.un.org/development/desa/disabilities/convention-on-the-rights-of-persons-with-disabilities/article-12-equal-recognition-before-the-law.html). The project must identify the applicable law and authority in each context rather than infer guardianship or incapacity from disability or dependency.
 
 ### 4.3 Rights entail correlated duties and limits on power
 

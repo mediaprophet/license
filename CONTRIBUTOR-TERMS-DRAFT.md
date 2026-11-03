@@ -9,6 +9,8 @@ These terms are a drafting checklist for legal review. They are not active merel
 
 The contributor terms must let the project preserve attribution, account for useful work and obligation costs, protect contributors from false compensation expectations, and give one identified Licensor sufficient rights to release the combined work under present and future licences.
 
+The broader [project purpose](PROJECT-PURPOSE.md) is to support cooperative and collaborative work, including humanitarian ICT, in which accepted contributions and applied resources can be fairly compensated before an authorised licence transition for an identified resulting work or derivative.
+
 ## 2. Required contributor declarations
 
 For each submitted contribution, the contributor should declare that:
@@ -50,6 +52,8 @@ For each Accepted Work item, a separate signed or authenticated record should st
 - tax and payment-channel responsibility;
 - dispute and correction process; and
 - relationship between payment, attribution, and retained rights.
+
+For compensation-based licence transitions, the record should also identify the work or derivative and version concerned, accepted labour and resource expenses, allocation of shared costs, settlement evidence, outstanding or disputed amounts, and the agreed criterion for full satisfaction. It should specify whether settlement is collective for the work or specific to a recipient, and how later contributions are accounted for without charging a settled obligation again. Full satisfaction supports the authorised release decision; it does not itself grant new permissions or transfer rights.
 
 No debt, interest, multiplier, token, ownership interest, partnership, employment, fiduciary duty, or governance right should arise merely from a commit, pull request, ontology statement, or ledger entry.
 

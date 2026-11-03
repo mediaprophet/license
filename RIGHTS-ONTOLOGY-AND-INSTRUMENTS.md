@@ -63,6 +63,28 @@ Accordingly:
 
 ## 4. Rights-statement record
 
+### Human centric rights fabric development requirements
+
+The [project purpose](PROJECT-PURPOSE.md) defines a rights fabric that connects human rights, permissions, duties, relationships, provenance, and remedies across information systems. The individual human is the **principal** in relation to their own human agency and rights. Other agents may represent that human, another human, an entity, or a legal person, or have no representative authority at all. Their actual principal, role, and authority must be recorded rather than inferred from interaction with the affected human. A legal person such as a corporation must not be conflated with a human. Third-party ownership or control of the human's characteristics and properties must not invalidate their human rights.
+
+The project's biometric scope includes **mindware**, encompassing objective and subjective foundations and formations of human experience, understanding, and agency. Representations, observations, and inferences about these characteristics must remain distinguishable from the human. The broader project vocabulary must be mapped explicitly to applicable legal categories rather than silently equated with a statutory definition of biometric data.
+
+The intended model and supporting software need to represent:
+
+- the principal human, each agent's role, other affected humans, and the source and limits of each asserted authority;
+- each agent's actual principal or represented entity, permitted uses, legally grounded duties and limitations, and consequences of misuse with their competent decision-maker and remedy pathway;
+- separate permissions and duties for collection, storage, inference, disclosure, onward use, correction, retention, and deletion or restriction where applicable;
+- separate rights and restrictions concerning identification, influence, interference, profiling, manipulation, and other acts affecting a human or their informational environment, regardless of whether the agent represents that human;
+- stewardship grants for specified computational representations of identifiers, recording the permitted acts, purpose, agent, actual principal, context, duration, conditions, and limits on retention, inference, disclosure, and onward use; uses outside those terms are not authorised by the grant;
+- the provenance, purpose, uncertainty, and contestability of observations or inferences concerning biometrics and mindware;
+- guardianship, supported decision-making, and other representation as distinct relationships, including scope, evidence, duration, review, conflicts, and changes in authority;
+- accessible participation by the principal human, their expressed will and preferences, and routes to independent review and remedy; and
+- WellFair considerations of welfare and fairness, including discriminatory effects, coercion, exclusion, and whether exercising rights is practical.
+
+Possession of information or credentials is neither proof of representative authority nor a right to perform any particular act. Permission to authenticate using an identifier representation does not imply permission to identify across services, profile, influence, manipulate, disclose, or repurpose it. An agent must establish the applicable basis for each act; any independent legal authority must be recorded separately from a human's grant. Withdrawal or expiry of an agent's authority should trigger reassessment of dependent permissions without purporting to erase every downstream copy or override independently applicable duties. These are development requirements for the ontology, profiles, and runtime systems; this addition does not assert that the current schema or validator implements them.
+
+### Existing rights statement fields
+
 Each statement contains at least:
 
 | Field | Meaning |

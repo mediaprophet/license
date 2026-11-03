@@ -43,7 +43,13 @@ Before producing a permission or transfer clause, the generator requires classif
 
 The profile must not assert undifferentiated “ownership of data”. It records specific copyright, database, confidentiality, custody, access, control, privacy, contractual, community, participation, and other positions with their authority sources.
 
+This distinction supports the project objective that humans should own their own biometrics, including **mindware** in the broader project sense defined in [Project purpose](PROJECT-PURPOSE.md). The individual human is the principal, distinct from agents processing information or acting under representative authority. The objective requires a rights fabric that preserves human rights across copying, inference, onward transfer, and changes of custodian; it cannot be implemented solely as title to a file. Third-party control of the principal human's characteristics and properties must not invalidate those rights.
+
+Human centric transfer assessments should account for biometric and mindware representations, multiple affected humans, bounded guardianship and support relationships, and accessible participation and remedy. Those relationships and WellFair purposes of welfare and fairness inform the intended ecosystem design; the existence of a transfer record does not prove that its safeguards operate in practice.
+
 ## 4. Actor and role classification
+
+A stewardship grant over computational representations of human identifiers must remain bounded by its specified purposes, permitted acts, recipients, duration, and terms across transfers. Receiving a representation does not itself permit identification, influence, interference, profiling, manipulation, or further disclosure. Each act requires an applicable basis, with independently applicable legal authority distinguished from the human's grant. The assessment must cover agents acting for unrelated entities as well as representatives of the affected human.
 
 For each collection, storage, processing, inference, disclosure, or transfer, identify:
 

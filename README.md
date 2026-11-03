@@ -1,8 +1,24 @@
-# Humanitarian Equity Licensing Framework
+# License and rights management for cooperative ecosystems
 
 Status: working implementation and drafts for legal review
 
-This repository develops a creator- and rights-ontology-centred licensing methodology and generator for software and related works. It treats the natural-person creator as an affected rights holder whose autonomy, labour, compute and LLM-token costs, capital, opportunity, moral and material interests, and enforcement burden must not be externalised to them for an exploiter's benefit. It supports publicly inspectable source without implied use, controlled operational grants, multi-agent information relations, transborder safeguards, cryptographic instruments, deterrence, profit and cost recovery, enforcement funding, contribution provenance, and humanitarian protections.
+**Development and drafting notice:** This work remains in development and uses agents in its research, drafting, and implementation processes. Its wording, terminology, specific details, and statements may contain errors, inconsistencies, omissions, or poorly drafted formulations, including agent-introduced errors. Identifying, reviewing, correcting, and validating these issues is part of the underlying development work. The relevant documentation, legal instruments, and system behaviour must be reconciled and validated before related functional components can transition their licensing to make use of these systems. Published drafts and generated artifacts do not, by themselves, establish readiness for that transition.
+
+`license` develops the Humanitarian Equity Licensing Framework: a methodology, rights model, and supporting software for intellectual property licensing and digital rights management across related ecosystem projects, particularly software. Its scope connects copyright with contract and international trade law, other applicable rights, and human rights including dignity, privacy, and personhood.
+
+The intended outcome is to support cooperative and collaborative projects, including humanitarian information and communications technology (ICT), while recognising contributors' work and applied resources. Projects should be able to record agreed compensation and expenses, establish when the relevant obligations have been fully met, and then authorise a different licence for an identified resulting work or derivative. Attribution, human rights, and the authority to license remain part of that process.
+
+**Start with [Project purpose and ecosystem licensing transitions](PROJECT-PURPOSE.md).** Related projects can link to that explanation of the interim approach, intended outcome, and software still needed to deliver it.
+
+The framework also develops a rights fabric for human centric information systems, connected to **WellFair** purposes of welfare and fairness. The individual human is the **principal** in relation to their own human agency and rights. Other agents may act for that human or for other humans, entities, or legal persons; their actual principal and authority must be explicit. Enabling humans to own their own biometrics is central to this direction. Here, biometrics extends to **mindware**: the objective and subjective foundations through which a human experiences and understands reality, forms intentions, and exercises agency. Third-party ownership or control of these characteristics and properties must not invalidate the principal human's rights. The intended systems must connect permitted uses, limitations, and consequences of misuse to applicable law, including in guardianship and other agency relationships. The underlying capabilities remain in development.
+
+The rights fabric concerns an agent's right to act, identify, influence, interfere, profile, manipulate, or otherwise affect a human, as well as any authority to represent them. A human exercising stewardship over their identifiers may permit use of specified computational representations for specified purposes and terms. That grant authorises those uses and no others; access to a representation does not create general permission to act upon the human or repurpose their identifiers.
+
+## Interim licensing in related projects
+
+Other ecosystem projects currently use Creative Commons licences as an interim approach while the software needed for the intended licensing and rights management systems is developed. Each project's own licence notice identifies its actual terms. This statement does not specify a Creative Commons licence for this repository or add conditions to another project's existing grant.
+
+The public inspection licence and other instruments in this repository are proposed options for expressly adopted releases. They do not describe the permissions already granted by those other projects. The current generator validates profiles and assembles draft documents; the broader contribution, compensation, governance, and licence-transition systems remain development objectives.
 
 Nothing in this repository applies to another project or replaces an existing licence unless the authorised rights holder formally adopts identified, reviewed artifacts for an identified release. Generated documents are drafts unless their approval and adoption records establish otherwise.
 
@@ -23,6 +39,7 @@ The generator does not adjudicate liability, issue demands, calculate debts, scr
 
 ## Foundations and architecture
 
+- [Project purpose and ecosystem licensing transitions](PROJECT-PURPOSE.md) — reusable explanation for related projects, interim Creative Commons use, cooperative compensation, and intended software capabilities.
 - [Humanitarian foundations](HUMANITARIAN-FOUNDATIONS.md) — normative principles, semantic model, generator invariants, and source-to-rule mapping.
 - [Creator interests and economic justice](CREATOR-RIGHTS-AND-ECONOMIC-JUSTICE.md) — creator autonomy, human-rights foundations, invested resources, AI-assisted production, exploitation, remedies, and enforcement funding.
 - [Rights ontology and applied instruments](RIGHTS-ONTOLOGY-AND-INSTRUMENTS.md) — jural relations, multi-agent rights, legal instruments, tokens, credentials, ledgers, and executable-policy boundaries.

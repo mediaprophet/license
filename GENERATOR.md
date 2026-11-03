@@ -4,6 +4,10 @@ The repository includes a working, dependency-free Python validator and document
 
 It does **not** decide legal liability, issue demands, calculate a debt, scrape suspected users, select counsel, or initiate enforcement.
 
+The broader [project purpose](PROJECT-PURPOSE.md) includes contribution accounting, verified compensation and expense settlement, cooperative governance, and authorised licence transitions after agreed obligations are fully met. Those are development objectives beyond the current document generator. Generating a bundle does not establish that contributors have been paid or that a licence transition has occurred.
+
+The intended human centric ecosystem also requires a rights fabric for principal human and agent relationships, biometrics and mindware, bounded guardianship authority, supported decision-making, and WellFair purposes of welfare and fairness. These concepts are explained in [Project purpose](PROJECT-PURPOSE.md) and developed as requirements in the [rights ontology specification](RIGHTS-ONTOLOGY-AND-INSTRUMENTS.md). The current generator does not implement or verify these broader capabilities merely by producing rights-related documents.
+
 ## Requirements
 
 - Python 3.11 or later; no third-party packages are required.
@@ -99,7 +103,7 @@ The tests cover valid examples, creator autonomy and investment, AI-use boundari
 3. Complete title, third-party-material, jurisdiction, privacy, transfer, trade, security, exclusion and remedies review.
 4. Validate until no errors remain and every warning is deliberately resolved.
 5. Generate into a new directory.
-6. Have qualified reviewers inspect the generated legal and semantic artifacts together.
+6. Have qualified reviewers inspect the generated legal and semantic artifacts together, identify and remediate errors or poorly drafted wording from the development process, including agent-assisted work, and validate consistency with the relevant system behaviour before licensing transition or adoption. Passing automated validation does not establish drafting accuracy or readiness.
 7. Record approval identifiers and expiry, regenerate, and independently verify hashes.
 8. Implement affirmative acceptance and durable receipt issuance before relying on contractual remedies.
 9. Apply the adopted artifacts only to the identified release through an explicit release decision.

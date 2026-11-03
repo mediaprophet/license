@@ -1,10 +1,13 @@
 # Humanitarian Equity Licensing Framework
 
 Status: working draft for legal review  
-Version: 0.1-draft  
-Date: 4 August 2026
+Version: 0.2-draft
 
-This document defines a licensing methodology for work developed in public where transparency is required but operational use is not yet authorised. It integrates the repository's historic concern with attribution, useful work, obligation costs, fair compensation, and human-rights-aligned governance.
+Updated: 3 November 2026
+
+This document develops a proposed incubation and release pathway within the broader framework for cooperative licensing, digital rights, contributor compensation, and humanitarian ICT. [Project purpose and ecosystem licensing transitions](PROJECT-PURPOSE.md) explains the shared direction and why other ecosystem projects currently use Creative Commons licences while the intended supporting software is developed.
+
+The public inspection restrictions below describe a proposed licence option for expressly identified releases. They do not replace the Creative Commons or other licences already used by related projects, and they are not mandatory stages for every project using this framework.
 
 Its normative and semantic basis is defined in `HUMANITARIAN-FOUNDATIONS.md`. It is a policy and design document, not itself a copyright licence and not legal advice. The operative terms proposed for the incubation phase are in `INCUBATION-LICENCE-DRAFT.md`. Nothing in this drafting repository applies to another work unless its authorised rights holder formally adopts identified terms for an identified release after legal review. Existing licences remain unaffected.
 
@@ -14,11 +17,11 @@ The generator architecture is further specified in `CREATOR-RIGHTS-AND-ECONOMIC-
 
 ## 1. Intended outcome
 
-During development, the source is **publicly inspectable** so that natural persons can understand and statically review it. Publication does not authorise anyone to run, modify, deploy, redistribute, commercialise, train machine-learning systems on, or build products from it.
+Under the proposed public inspection option, development source would be **publicly inspectable** so that natural persons can understand and statically review it. That proposed grant would not authorise execution, modification, deployment, redistribution, commercialisation, machine-learning training, or product development. Actual permissions depend on the licence adopted for the particular work.
 
 The natural-person creator is an affected person. Inspectability must not transfer the creator's production and enforcement costs to them while allowing another actor to capture the value. The creator may refuse, condition, price, suspend, or withhold every permission not already granted or required by law. An excluded actor receives no licence merely because perfect technical exclusion is impossible.
 
-The framework is intentionally not open source. Open-source licences must permit derived works and cannot discriminate against persons, groups, or fields of endeavour. “Open source”, “free software”, and “Creative Commons” should therefore not be used to describe the incubation phase. “Publicly inspectable source” or “source-visible” is more accurate.
+The proposed public inspection licence is intentionally not an open-source licence. Open-source licences must permit derived works and cannot discriminate against persons, groups, or fields of endeavour. “Publicly inspectable source” or “source-visible” describes this particular proposal. It is distinct from the interim Creative Commons licences used by other projects and from any later ecosystem licence.
 
 The restrictions are a defensive development posture. They are not a promise that the project will remain under these terms, nor a promise that the finished ecosystem will become permissively licensed. A later licence should be chosen only after the project has working safety, governance, attribution, and compensation systems.
 
@@ -38,7 +41,7 @@ Sensitive components, threat models, security controls, keys, datasets, and code
 
 ### Phase 1 — public inspection
 
-The exact source release is published under the proposed Humanitarian Equity Public Inspection Licence. Eligible natural persons receive only the narrow permissions technically necessary to view and statically inspect an unmodified copy. No operational use or derivative work is authorised.
+If this option is adopted, the exact source release is published under the proposed Humanitarian Equity Public Inspection Licence. Eligible natural persons receive only the narrow permissions technically necessary to view and statically inspect an unmodified copy. No operational use or derivative work is authorised by that grant.
 
 ### Phase 2 — controlled evaluation
 
@@ -51,6 +54,8 @@ Approved deployments use a separate agreement identifying the operator, purpose,
 ### Phase 4 — ecosystem licence
 
 When the ecosystem is sufficiently complete, a new licence may be offered for a defined release. The licence could be open source, source-available, cooperative, commercial, public-benefit, or dual-licensed. That decision is not made by this draft.
+
+For a transition based on contributor compensation, the intended milestone is full satisfaction of the agreed compensation and obligation fees for the identified work or derivative. The supporting systems must establish the contribution scope, resource costs, settlement evidence, outstanding disputes, and licensing authority before recording the release decision. Payment alone does not activate new terms.
 
 Each release retains the licence under which its recipients obtained it. The Licensor may offer the same release under additional terms, or release later versions under different terms, but cannot rewrite history by withdrawing rights already validly granted. Relicensing also requires authority over every included contribution.
 
@@ -96,7 +101,7 @@ For any later operational grant, defined conduct involving trafficking, forced l
 
 Creator investment is recorded even where no separate contributor requested the work. Human labour, LLM tokens, compute, storage, hosting, capital, professional services, opportunity, safety, compliance, investigation, preservation, and enforcement costs must remain visible in licence pricing, legitimate-interest analysis, settlement, loss, gain-based relief, and funding decisions. Unpaid work is not presumptively valueless.
 
-Public suggestions, issues, pull requests, and code submissions create ownership and expectation risks. No contribution should be merged until the contributor accepts `CONTRIBUTOR-TERMS-DRAFT.md` or a lawyer-approved replacement.
+Public suggestions, issues, pull requests, and code submissions create ownership and expectation risks. The proposed contribution process requires an approved agreement before acceptance. `CONTRIBUTOR-TERMS-DRAFT.md` is a drafting checklist, not an active agreement.
 
 To preserve a single decision-maker's ability to offer future licences, the preferred inbound model is assignment of transferable economic rights to the Licensor, with an alternative broad licence only where assignment is legally unavailable. Moral rights require jurisdiction-specific treatment; in Australia they cannot simply be assigned or licensed away.
 
@@ -128,6 +133,7 @@ The project may accurately say “project lineage and foundational work date to 
 The Licensor should record a signed release decision before moving a component between phases. At minimum, it should confirm:
 
 - chain of title and third-party licence compatibility;
+- review and remediation of wording, terminology, specific details, and drafting errors, including those introduced during agent-assisted development, with the relevant documents, legal instruments, and system behaviour reconciled and validated before a related functional component transitions to use these systems;
 - safety and abuse testing appropriate to the component;
 - protection of secrets and vulnerable-person data;
 - contribution and obligation-cost records;
@@ -137,7 +143,7 @@ The Licensor should record a signed release decision before moving a component b
 - the jurisdictions, actors, purposes, and environments permitted; and
 - whether the change applies only to a new version or also offers an additional licence for an old version.
 
-The historic 80% obligation-fulfilment threshold may remain a governance target, but it should not be represented as sufficient by itself. Safety, title, sustainability, and effective control are independent gates.
+The historic 80% obligation-fulfilment threshold is not the completion criterion for the compensation-based transition described here. That transition requires full satisfaction of the defined agreed obligations, together with the independent safety, title, sustainability, and governance gates and an authorised licence decision.
 
 ## 10. Implementation order
 
@@ -148,7 +154,7 @@ The historic 80% obligation-fulfilment threshold may remain a governance target,
 5. Finalise the public inspection licence, exclusions schedule, and evidence-backed remedies schedule.
 6. Put contributor terms in place before accepting more contributions.
 7. Populate the rights register and reconcile it with the RDF ontologies.
-8. Replace the current `LICENSE` only through an explicit, versioned release decision.
+8. Apply new licence notices only through an explicit, versioned release decision that identifies existing grants and the rights available for the affected material.
 9. Add short file headers that identify the governing root licence without making inaccurate historical copyright claims.
 
 ## 11. Authoritative reference points
