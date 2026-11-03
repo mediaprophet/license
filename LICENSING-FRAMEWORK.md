@@ -1,11 +1,13 @@
 # Humanitarian Equity Licensing Framework
 
-Status: working draft for legal review  
-Version: 0.2-draft
+Status: pre-operational framework; constituent ecosystem development and adoption review pending
+Version: 0.3-draft
 
 Updated: 3 November 2026
 
 This document develops a proposed incubation and release pathway within the broader framework for cooperative licensing, digital rights, contributor compensation, and humanitarian ICT. [Project purpose and ecosystem licensing transitions](PROJECT-PURPOSE.md) explains the shared direction and why other ecosystem projects currently use Creative Commons licences while the intended supporting software is developed.
+
+The temporary alternative licences reflect a dependency: the constituent ecosystem systems required to use this licensing and rights fabric are still being developed. Related QualiaDB, CML and semantic-instrument work informs the framework's terminology, intended operation and readiness description. Completion and validation of the required components for an identified use is a prerequisite to operational adoption. It is separate from satisfying a particular work's compensation obligations and authorising its licence transition; neither milestone substitutes for the other.
 
 The public inspection restrictions below describe a proposed licence option for expressly identified releases. They do not replace the Creative Commons or other licences already used by related projects, and they are not mandatory stages for every project using this framework.
 
@@ -114,6 +116,10 @@ Compensation and licence permission are separate state machines:
 - submitting work does not guarantee acceptance or payment; and
 - transition milestones guide the Licensor but do not automatically relicense a release.
 
+The [contribution lifecycle](CONTRIBUTION-LIFECYCLE.md) supplies the detailed procedural design: requested versus unsolicited work, accepted outputs, accrued obligations, valuation evidence, reasoned review, settlement allocation, disputes and maintenance across versions. Its proposed records are not implemented by the current generator. Contributions, benefits and payment mechanisms must remain distinguishable; nonfinancial recognition cannot silently replace agreed money. Upstream licence conditions, separately accepted upstream payment obligations and voluntary support must also remain distinct.
+
+Participation and affected-human interests extend beyond contribution accounting. The [fairness and rights review](FAIRNESS-AND-RIGHTS-REVIEW.md) covers sustainable participation, access and ecological burdens, information rights and practical remedy. The [contextual assertions specification](CONTEXTUAL-ASSERTIONS.md) governs evidence and claims used in those decisions without converting allegations into authoritative facts or general reputation scores.
+
 ## 8. Rights and provenance records
 
 Use `RIGHTS-REGISTER.md` as the human-readable source of truth and map it into RDF after the legal model is stable. Each material item should identify:
@@ -156,6 +162,8 @@ The historic 80% obligation-fulfilment threshold is not the completion criterion
 7. Populate the rights register and reconcile it with the RDF ontologies.
 8. Apply new licence notices only through an explicit, versioned release decision that identifies existing grants and the rights available for the affected material.
 9. Add short file headers that identify the governing root licence without making inaccurate historical copyright claims.
+
+These adoption tasks must be adapted to the chosen release model; public inspection is an option, not a prerequisite for every related project. The next technical phase follows the [QualiaDB implementation roadmap](QUALIADB-IMPLEMENTATION-ROADMAP.md): reconcile the contribution and rights specifications with verified CML and semantic-instrument contracts, implement bounded prototypes, test counterexamples and produce reviewable first drafts before deployment. The [source adoption record](HUMANITARIAN-EQUITY-SOURCE-MANIFEST.md) records why historical compensation, governance and standards proposals were retained or revised.
 
 ## 11. Authoritative reference points
 

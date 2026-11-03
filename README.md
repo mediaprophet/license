@@ -1,6 +1,6 @@
 # License and rights management for cooperative ecosystems
 
-Status: working implementation and drafts for legal review
+Status: licensing and rights fabric in development; prototype document generator available; ecosystem prerequisites and adoption review incomplete
 
 **Development and drafting notice:** This work remains in development and uses agents in its research, drafting, and implementation processes. Its wording, terminology, specific details, and statements may contain errors, inconsistencies, omissions, or poorly drafted formulations, including agent-introduced errors. Identifying, reviewing, correcting, and validating these issues is part of the underlying development work. The relevant documentation, legal instruments, and system behaviour must be reconciled and validated before related functional components can transition their licensing to make use of these systems. Published drafts and generated artifacts do not, by themselves, establish readiness for that transition.
 
@@ -10,19 +10,34 @@ The intended outcome is to support cooperative and collaborative projects, inclu
 
 **Start with [Project purpose and ecosystem licensing transitions](PROJECT-PURPOSE.md).** Related projects can link to that explanation of the interim approach, intended outcome, and software still needed to deliver it.
 
+The intended framework depends on constituent ecosystem work, including QualiaDB's logic systems, CML and semantic instruments, alongside authority, privacy, contribution, settlement and governance capabilities. Those dependencies must be developed, integrated and validated for the intended use before projects can rely on the corresponding licensing and rights fabric functions. This dependency is a reason for the temporary alternative licences currently used by related projects. Completing the documentation or running the prototype generator does not complete that underlying work.
+
 The framework also develops a rights fabric for human centric information systems, connected to **WellFair** purposes of welfare and fairness. The individual human is the **principal** in relation to their own human agency and rights. Other agents may act for that human or for other humans, entities, or legal persons; their actual principal and authority must be explicit. Enabling humans to own their own biometrics is central to this direction. Here, biometrics extends to **mindware**: the objective and subjective foundations through which a human experiences and understands reality, forms intentions, and exercises agency. Third-party ownership or control of these characteristics and properties must not invalidate the principal human's rights. The intended systems must connect permitted uses, limitations, and consequences of misuse to applicable law, including in guardianship and other agency relationships. The underlying capabilities remain in development.
 
 The rights fabric concerns an agent's right to act, identify, influence, interfere, profile, manipulate, or otherwise affect a human, as well as any authority to represent them. A human exercising stewardship over their identifiers may permit use of specified computational representations for specified purposes and terms. That grant authorises those uses and no others; access to a representation does not create general permission to act upon the human or repurpose their identifiers.
 
 ## Interim licensing in related projects
 
-Other ecosystem projects currently use Creative Commons licences as an interim approach while the software needed for the intended licensing and rights management systems is developed. Each project's own licence notice identifies its actual terms. This statement does not specify a Creative Commons licence for this repository or add conditions to another project's existing grant.
+Other ecosystem projects currently use Creative Commons licences as temporary alternatives while the constituent systems needed to use the intended licensing and rights fabric are completed. The interim approach reflects that dependency and the framework's development status. Each project's own licence notice identifies its actual terms. This statement does not specify a Creative Commons licence for this repository or add conditions to another project's existing grant.
 
 The public inspection licence and other instruments in this repository are proposed options for expressly adopted releases. They do not describe the permissions already granted by those other projects. The current generator validates profiles and assembles draft documents; the broader contribution, compensation, governance, and licence-transition systems remain development objectives.
 
 Nothing in this repository applies to another project or replaces an existing licence unless the authorised rights holder formally adopts identified, reviewed artifacts for an identified release. Generated documents are drafts unless their approval and adoption records establish otherwise.
 
-## Working generator
+## Content development and next implementation phase
+
+The current content revision develops the useful proposals from the earlier Humanitarian Equity Framework into reviewable specifications. The [source adoption record](HUMANITARIAN-EQUITY-SOURCE-MANIFEST.md) explains what is retained, revised or superseded. The [project plan](PROJECT-PLAN.md) records scope and delivery, and the [review record](CONTENT-REVIEW.md) records findings, verification and remaining work.
+
+| Start here when you need to… | Reference |
+| --- | --- |
+| Record work, resources, acceptance, valuation, obligations and settlement | [Contribution lifecycle](CONTRIBUTION-LIFECYCLE.md) |
+| Review human welfare, fairness, resource burdens and practical remedy | [Fairness and rights review](FAIRNESS-AND-RIGHTS-REVIEW.md) |
+| Handle evidence, inferences, credentials, allegations and challenges | [Contextual assertions](CONTEXTUAL-ASSERTIONS.md) |
+| Prepare implementation with QualiaDB, CML and semantic instruments | [QualiaDB implementation roadmap](QUALIADB-IMPLEMENTATION-ROADMAP.md) |
+
+These specifications prepare the next phase. They are not additional input fields accepted by the existing generator and do not establish a working payment or rights-enforcement service. The roadmap identifies source versions, candidate integration points and the checks required before semantic tools can support reviewed first drafts.
+
+## Prototype document generator
 
 The dependency-free Python generator validates a JSON profile and assembles a coordinated artifact bundle.
 

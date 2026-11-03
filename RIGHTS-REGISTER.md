@@ -1,7 +1,7 @@
 # Rights and Provenance Register
 
 Status: initial template  
-Date: 4 August 2026
+Updated: 3 November 2026
 
 This register separates project history from legal ownership of particular material. It is not proof by itself and does not replace source records, contracts, assignments, or legal review.
 
@@ -45,9 +45,21 @@ Unpaid work is not recorded as having zero value. This register preserves the ev
 
 For AI-assisted work, record the human plan, prompts, supplied materials, selections, corrections, integration, testing, editorial judgment, provider and model terms, token and compute use, machine outputs, and final authorship decisions separately. Expenditure is relevant evidence but does not by itself prove copyright subsistence or ownership in every output.
 
+## Contribution, settlement and assertion references
+
+The investment register records effort and resources; it does not establish that an amount is payable, settled or sufficient to authorise a licence transition. Supplement it with the distinct records in the [contribution lifecycle](CONTRIBUTION-LIFECYCLE.md). The following is a manual review template for the next implementation phase, not an additional generator schema:
+
+| Material / immutable version | Agreement and accepted scope | Claim and decision | Obligation and liable party | Allocation and settlement evidence | Dispute / correction | Dependency and existing licence | Release authority / decision |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| **[artifact/version]** | **[record IDs]** | **[IDs/status/reviewer]** | **[ID/basis/amount/currency or none]** | **[IDs/amount allocated/outstanding]** | **[ID/status/impact]** | **[version/terms/authority]** | **[ID or pending]** |
+
+Keep dependency attribution, dependency licence duties, accepted upstream funding obligations and voluntary support separately identified. Use allocation references to prevent double charging of shared costs or double recovery of an already satisfied obligation. New maintenance obligations must identify their own scope and affected version; they must not silently reopen a completed release decision.
+
+Claims about authorship, contribution, authority or conduct should link to [contextual assertion records](CONTEXTUAL-ASSERTIONS.md), including issuer, evidence, permitted uses, uncertainty and challenge history. A disputed authorship statement must remain distinguishable from a verified assignment or an adjudicated finding. Public provenance should expose only the information justified for that purpose; private identity, financial, biometric and guardian records need protected storage and access review. Hashes and stable identifiers also require privacy review where they can expose or link humans.
+
 ## Proposed notice method
 
-After verification, each release should use a notice such as:
+For a release that expressly adopts the public inspection option after verification, a notice may take this form:
 
 > Copyright © **[actual year or year range for the material] [verified rights holder]**.  
 > Publicly inspectable only; no permission to run, modify, redistribute, or deploy. See the root licence for the identified release.

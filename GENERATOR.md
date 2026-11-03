@@ -1,6 +1,8 @@
 # Licence Generator
 
-The repository includes a working, dependency-free Python validator and document assembler. It compiles a creator- and rights-ontology profile into coordinated legal, creator-investment, semantic, information-governance, technical-instrument, deterrence, recovery, and enforcement-funding drafts.
+The repository includes a functioning prototype, dependency-free Python validator and document assembler. It compiles a creator- and rights-ontology profile into coordinated legal, creator-investment, semantic, information-governance, technical-instrument, deterrence, recovery, and enforcement-funding drafts.
+
+This limited implementation does not make the licensing and rights fabric operational. Its intended use depends on further constituent ecosystem development, integration and validation, including related semantic tooling and the required authority, privacy, contribution, settlement and governance functions. That dependency underlies the temporary alternative licences used by related projects, as explained in [Project purpose](PROJECT-PURPOSE.md).
 
 It does **not** decide legal liability, issue demands, calculate a debt, scrape suspected users, select counsel, or initiate enforcement.
 
@@ -15,7 +17,7 @@ The intended human centric ecosystem also requires a rights fabric for principal
 
 ## Validate a profile
 
-From `C:\github\license`:
+From the repository root:
 
 ```powershell
 .\license-generator.cmd validate .\examples\public-inspection-profile.json
@@ -97,6 +99,10 @@ python -m unittest discover -s tests -v
 The tests cover valid examples, creator autonomy and investment, AI-use boundaries, creator-held relations, recovery priority, deterrent classification, post-event settlements, funding safeguards, reference integrity, contract formation, non-assenter debt, artificial-agent accountability, automated adjudication, ledger privacy, adoption gates, safe output handling, and generated manifest hashes.
 
 ## Adoption workflow
+
+The [contribution lifecycle](CONTRIBUTION-LIFECYCLE.md), [contextual assertions](CONTEXTUAL-ASSERTIONS.md) and [fairness and rights review](FAIRNESS-AND-RIGHTS-REVIEW.md) are design specifications for the next phase. Their proposed records and examples are not new fields in `schemas/license-profile.schema.json`. Keep supplementary review records outside generator profiles until a versioned schema, adapter and validation tests explicitly support them. In particular, the existing creator-investment schedule is not a verified payable-obligation or settlement register.
+
+The [QualiaDB implementation roadmap](QUALIADB-IMPLEMENTATION-ROADMAP.md) defines the staged handoff to CML, logic systems and semantic instruments. A future adapter must preserve source versions, authority, privacy restrictions and human-review status through generation. No QualiaDB runtime is currently invoked by this generator.
 
 1. Copy an example to a project-specific profile.
 2. Replace every bracketed or example value and use the actual release hash.
